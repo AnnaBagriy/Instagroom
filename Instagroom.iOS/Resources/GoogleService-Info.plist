@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:853196584305:ios:f1dc5a4b36bd2ab6</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>853196584305-lo1sm14in0gntdg5iq46cmfuvldtlijh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.853196584305-lo1sm14in0gntdg5iq46cmfuvldtlijh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCHq2cdJDASIGaSIQNyqvII6TfiTnFXd0Q</string>
+	<key>GCM_SENDER_ID</key>
+	<string>853196584305</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.jetsoftpro.Instagroom</string>
+	<key>PROJECT_ID</key>
+	<string>instagroom</string>
+	<key>STORAGE_BUCKET</key>
+	<string>instagroom.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>DATABASE_URL</key>
+	<string>https://instagroom.firebaseio.com</string>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+</dict>
+</plist>

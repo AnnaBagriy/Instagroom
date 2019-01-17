@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--/-:cnd -->
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{57B660E4-4EB5-46C5-A0D5-303C5C1B951B}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Instagroom.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Instagroom.iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer: Maryan Savka (YKCU29NCLH)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <CodesignKey>iPhone Developer: Maryan Savka (YKCU29NCLH)</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignKey>iPhone Developer: Maryan Savka (YKCU29NCLH)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer: Maryan Savka (YKCU29NCLH)</CodesignKey>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <CodesignKey>iPhone Developer: Maryan Savka (YKCU29NCLH)</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <CodesignKey>iPhone Developer: Maryan Savka (YKCU29NCLH)</CodesignKey>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Facebook.iOS">
+      <Version>4.38.0</Version>
+    </PackageReference>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.5.231</Version>
+    </PackageReference>
+    <PackageReference Include="sameerIOTApps.Plugin.SecureStorage">
+      <Version>2.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Google.iOS.SignIn">
+      <Version>4.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.DownloadCache">
+      <Version>5.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Platform">
+      <Version>5.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Binding">
+      <Version>5.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.iOS.Support">
+      <Version>5.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http">
+      <Version>4.3.4</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading">
+      <Version>2.4.4.859</Version>
+    </PackageReference>
+    <PackageReference Include="Cirrious.FluentLayout">
+      <Version>2.9.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DebugTrace.cs" />
+    <Compile Include="LinkerPleaseInclude.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Extensions\ColorExtensions.cs" />
+    <Compile Include="Controls\UITextFieldWithBottomLine.cs" />
+    <Compile Include="Controls\UIButtonWithShadow.cs" />
+    <Compile Include="Controls\UIGradientView.cs" />
+    <Compile Include="Controls\UIHorizontalLine.cs" />
+    <Compile Include="Helpers\FontHelper.cs" />
+    <Compile Include="Services\LocalizeService.cs" />
+    <Compile Include="Services\DatabaseService.cs" />
+    <Compile Include="Services\FacebookLoginService.cs" />
+    <Compile Include="Services\GoogleLoginService.cs" />
+    <Compile Include="Converters\PostCreationDateConverter.cs" />
+    <Compile Include="Views\Cells\UIPostCell.cs" />
+    <Compile Include="Views\Cells\UIPostCell.designer.cs">
+      <DependentUpon>UIPostCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cells\UIUserCell.cs" />
+    <Compile Include="Views\Cells\UIUserCell.designer.cs">
+      <DependentUpon>UIUserCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sources\PostCellViewSource.cs" />
+    <Compile Include="Sources\SearchResultsTableViewSource.cs" />
+    <Compile Include="Views\MainTabView.cs" />
+    <Compile Include="Views\MainTabView.designer.cs">
+      <DependentUpon>MainTabView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PostsView.cs" />
+    <Compile Include="Views\PostsView.designer.cs">
+      <DependentUpon>PostsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchView.cs" />
+    <Compile Include="Views\SearchView.designer.cs">
+      <DependentUpon>SearchView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignUpView.cs" />
+    <Compile Include="Views\SignUpView.designer.cs">
+      <DependentUpon>SignUpView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginView.cs" />
+    <Compile Include="Views\LoginView.designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Setup.cs" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+    <InterfaceDefinition Include="Views\Cells\UIPostCell.xib" />
+    <InterfaceDefinition Include="Views\Cells\UIUserCell.xib" />
+    <InterfaceDefinition Include="Sources\Storyboard.storyboard">
+      <SubType>Designer</SubType>
+    </InterfaceDefinition>
+    <InterfaceDefinition Include="Views\MainTabView.xib" />
+    <InterfaceDefinition Include="Views\PostsView.xib" />
+    <InterfaceDefinition Include="Views\SearchView.xib" />
+    <InterfaceDefinition Include="Views\SignUpView.xib" />
+    <InterfaceDefinition Include="Views\LoginView.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20_1x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20_2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20_3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29_1x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29_2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29_3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40_1x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40_2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40_3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-57x57_1x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-57x57_2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60_1x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60_2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60_3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-72x72_1x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-72x72_2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76_1x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76_2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76_3x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-50x50_1x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-50x50_2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-83.5x83.5_2x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\loginBackground.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\loginBackground.imageset\rectangle3.png" />
+    <ImageAsset Include="Assets.xcassets\loginBackground.imageset\rectangle3%402x.png" />
+    <ImageAsset Include="Assets.xcassets\loginBackground.imageset\rectangle3%403x.png" />
+    <ImageAsset Include="Assets.xcassets\DeepTurquoise.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Teal.colorset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\facebookLogo.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\googleLogo.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\facebookLogo.imageset\facebookLogo.png" />
+    <ImageAsset Include="Assets.xcassets\facebookLogo.imageset\facebookLogo%402x.png" />
+    <ImageAsset Include="Assets.xcassets\facebookLogo.imageset\facebookLogo%403x.png" />
+    <ImageAsset Include="Assets.xcassets\googleLogo.imageset\googlePlusSymbol.png" />
+    <ImageAsset Include="Assets.xcassets\googleLogo.imageset\googlePlusSymbol%402x.png" />
+    <ImageAsset Include="Assets.xcassets\googleLogo.imageset\googlePlusSymbol%403x.png" />
+    <ImageAsset Include="Assets.xcassets\googleLogo.imageset\googlePlusSymbol.pdf" />
+    <ImageAsset Include="Assets.xcassets\facebookLogo.imageset\facebookLogo.pdf" />
+    <ImageAsset Include="Assets.xcassets\signUpBackground.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\signUpBackground.imageset\rectangle3.png" />
+    <ImageAsset Include="Assets.xcassets\signUpBackground.imageset\rectangle3%402x.png" />
+    <ImageAsset Include="Assets.xcassets\signUpBackground.imageset\rectangle3%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icHome.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icHome.imageset\home.png" />
+    <ImageAsset Include="Assets.xcassets\icHome.imageset\home%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icHome.imageset\home%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icSearch.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icCamera.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icFavourites.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icProfile.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icCamera.imageset\cameraAlt.png" />
+    <ImageAsset Include="Assets.xcassets\icCamera.imageset\cameraAlt%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icCamera.imageset\cameraAlt%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icFavourites.imageset\favorite.png" />
+    <ImageAsset Include="Assets.xcassets\icFavourites.imageset\favorite%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icFavourites.imageset\favorite%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icProfile.imageset\person.png" />
+    <ImageAsset Include="Assets.xcassets\icProfile.imageset\person%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icProfile.imageset\person%403x.png" />
+    <ImageAsset Include="Assets.xcassets\instagroomLogo.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\instagroomLogo.imageset\instagroom.png" />
+    <ImageAsset Include="Assets.xcassets\instagroomLogo.imageset\instagroom%402x.png" />
+    <ImageAsset Include="Assets.xcassets\instagroomLogo.imageset\instagroom%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icCamera.imageset\cameraAlt.pdf" />
+    <ImageAsset Include="Assets.xcassets\icFavourites.imageset\favorite.pdf" />
+    <ImageAsset Include="Assets.xcassets\icHome.imageset\home.pdf" />
+    <ImageAsset Include="Assets.xcassets\icProfile.imageset\person %281%29.pdf" />
+    <ImageAsset Include="Assets.xcassets\icSearch.imageset\search.pdf" />
+    <ImageAsset Include="Assets.xcassets\icSearch.imageset\search.png" />
+    <ImageAsset Include="Assets.xcassets\icSearch.imageset\search%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icSearch.imageset\search%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icBookmark.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icHeart.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icBookmark.imageset\bookmarkBorder.pdf" />
+    <ImageAsset Include="Assets.xcassets\icBookmark.imageset\bookmarkBorder.png" />
+    <ImageAsset Include="Assets.xcassets\icBookmark.imageset\bookmarkBorder%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icBookmark.imageset\bookmarkBorder%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icHeart.imageset\heart.pdf" />
+    <ImageAsset Include="Assets.xcassets\icHeart.imageset\heart.png" />
+    <ImageAsset Include="Assets.xcassets\icHeart.imageset\heart%402x.png" />
+    <ImageAsset Include="Assets.xcassets\icHeart.imageset\heart%403x.png" />
+    <ImageAsset Include="Assets.xcassets\icUser.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icUser.imageset\default-user-avatar-thumbnail%402x-ad6390912469759cda3106088905fa5bfbadc41532fbaa28237209b1aa976fc9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Instagroom.Core\Instagroom.Core.csproj">
+      <Project>{16CA7A4E-7BF1-43D6-91D6-82EC1F496E84}</Project>
+      <Name>Instagroom.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\loginBackground.imageset\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Assets.xcassets\DeepTurquoise.colorset\" />
+    <Folder Include="Assets.xcassets\Teal.colorset\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Assets.xcassets\facebookLogo.imageset\" />
+    <Folder Include="Assets.xcassets\googleLogo.imageset\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Assets.xcassets\signUpBackground.imageset\" />
+    <Folder Include="Assets.xcassets\icHome.imageset\" />
+    <Folder Include="Assets.xcassets\icSearch.imageset\" />
+    <Folder Include="Assets.xcassets\icCamera.imageset\" />
+    <Folder Include="Assets.xcassets\icFavourites.imageset\" />
+    <Folder Include="Assets.xcassets\icProfile.imageset\" />
+    <Folder Include="Assets.xcassets\instagroomLogo.imageset\" />
+    <Folder Include="Services\" />
+    <Folder Include="Providers\" />
+    <Folder Include="Assets.xcassets\icBookmark.imageset\" />
+    <Folder Include="Assets.xcassets\icHeart.imageset\" />
+    <Folder Include="Assets.xcassets\icUser.imageset\" />
+    <Folder Include="Converters\" />
+    <Folder Include="Views\Cells\" />
+    <Folder Include="Sources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Roboto-Regular.ttf" />
+    <BundleResource Include="GoogleService-Info.plist" />
+    <BundleResource Include="Resources\GoogleService-Info.plist" />
+    <BundleResource Include="Resources\Roboto-Medium.ttf" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

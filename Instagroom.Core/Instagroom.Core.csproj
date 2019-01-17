@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--/-:cnd -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+    <PackageTargetFallback>portable-net45+win8+wpa81</PackageTargetFallback>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="sameerIOTApps.Plugin.SecureStorage" Version="2.5.0" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+    <PackageReference Include="Acr.UserDialogs" Version="6.5.1" />
+    <PackageReference Include="Xamarin.Auth" Version="1.6.0.4" />
+    <PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />
+    <PackageReference Include="SQLiteNetExtensions.Async" Version="2.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="MvvmCross.Core" Version="5.7.0" />
+    <PackageReference Include="MvvmCross.Plugin.ResxLocalization" Version="5.7.0" />
+  </ItemGroup>
+    
+  <ItemGroup>
+    <Compile Remove="Colors.cs" />
+    <Compile Remove="Mappers\User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Structures\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Services\" />
+    <Folder Include="Contracts\" />
+    <Folder Include="Contracts\Services\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Models\Data\" />
+    <Folder Include="Mappers\" />
+    <Folder Include="Providers\" />
+    <Folder Include="Managers\" />
+    <Folder Include="Contracts\Managers\" />
+    <Folder Include="Contracts\Mappers\" />
+    <Folder Include="Contracts\Repositories\" />
+    <Folder Include="Services\UiDataValidation\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Services\Base\" />
+    <Folder Include="Repositories\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\StringResources_ua_.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringResources_ua_.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Condition=" '$(EnableDefaultEmbeddedResourceItems)' == 'true' " Update="Resources\StringResources.ua.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringResources.ua.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\StringResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\StringResources_ua_.Designer.cs">
+      <DependentUpon>StringResources.ua.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\StringResources.Designer.cs">
+      <DependentUpon>StringResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="mscorlib" />
+  </ItemGroup>
+</Project>

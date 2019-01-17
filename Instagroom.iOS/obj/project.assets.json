@@ -1,0 +1,2631 @@
+{
+  "version": 3,
+  "targets": {
+    "Xamarin.iOS,Version=v1.0": {
+      "Acr.Support/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Acr.Support.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Acr.Support.iOS.dll": {}
+        }
+      },
+      "Acr.UserDialogs/6.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Acr.Support": "[2.1.0, 3.0.0)",
+          "BTProgressHUD": "[1.2.0.5, 2.0.0)",
+          "Splat": "[2.0.0, 3.0.0)"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Acr.UserDialogs.Interface.dll": {},
+          "lib/Xamarin.iOS10/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Acr.UserDialogs.Interface.dll": {},
+          "lib/Xamarin.iOS10/Acr.UserDialogs.dll": {}
+        }
+      },
+      "BTProgressHUD/1.2.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/BTProgressHUD.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/BTProgressHUD.dll": {}
+        }
+      },
+      "Cirrious.FluentLayout/2.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Cirrious.FluentLayouts.Touch.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Cirrious.FluentLayouts.Touch.dll": {}
+        }
+      },
+      "MvvmCross.Binding/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Core": "[5.7.0]"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Binding.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Binding.iOS.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Localization.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Binding.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Binding.iOS.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Localization.dll": {}
+        }
+      },
+      "MvvmCross.Core/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Platform": "[5.7.0]"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Core.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Core.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.iOS.dll": {}
+        }
+      },
+      "MvvmCross.iOS.Support/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Binding": "[5.7.0]",
+          "MvvmCross.Core": "[5.7.0]",
+          "MvvmCross.Platform": "[5.7.0]"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.iOS.Support.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.iOS.Support.dll": {}
+        }
+      },
+      "MvvmCross.Platform/5.7.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Platform.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Platform.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Platform.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Platform.iOS.dll": {}
+        }
+      },
+      "MvvmCross.Plugin.DownloadCache/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Platform": "[5.7.0]",
+          "System.Collections.Immutable": "1.4.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.iOS.dll": {}
+        }
+      },
+      "MvvmCross.Plugin.ResxLocalization/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Binding": "[5.7.0]",
+          "MvvmCross.Platform": "[5.7.0]"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.ResxLocalization.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.ResxLocalization.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "sameerIOTApps.Plugin.SecureStorage/2.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.SecureStorage.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.SecureStorage.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.SecureStorage.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.SecureStorage.dll": {}
+        }
+      },
+      "Splat/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Splat.dll": {}
+        }
+      },
+      "sqlite-net-pcl/1.5.231": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.bundle_green": "1.1.11"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        }
+      },
+      "SQLiteNetExtensions/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
+          "sqlite-net-pcl": "1.4.118"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
+        }
+      },
+      "SQLiteNetExtensions.Async/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLiteNetExtensions": "2.0.0",
+          "sqlite-net-pcl": "1.4.118"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_green/1.1.11": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.11",
+          "SQLitePCLRaw.provider.sqlite3.ios_unified": "1.1.11"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.11": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.sqlite3.ios_unified/1.1.11": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.11"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
+        }
+      },
+      "System.Collections.Immutable/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+        }
+      },
+      "System.Net.Http/4.3.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.6/System.Net.Http.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Net.Http.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "WebP.Touch/1.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/WebP.Touch.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/WebP.Touch.dll": {}
+        }
+      },
+      "Xamarin.Auth/1.6.0.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Json"
+        ],
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Auth.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Auth.dll": {}
+        }
+      },
+      "Xamarin.Build.Download/0.4.11": {
+        "type": "package",
+        "build": {
+          "build/Xamarin.Build.Download.props": {},
+          "build/Xamarin.Build.Download.targets": {}
+        }
+      },
+      "Xamarin.Facebook.CoreKit.iOS/4.35.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.CoreKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.CoreKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.iOS/4.38.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0",
+          "Xamarin.Facebook.LoginKit.iOS": "4.35.0",
+          "Xamarin.Facebook.MarketingKit.iOS": "4.35.0",
+          "Xamarin.Facebook.MessengerShareKit.iOS": "1.3.2",
+          "Xamarin.Facebook.PlacesKit.iOS": "4.35.0",
+          "Xamarin.Facebook.ShareKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/_._": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/_._": {}
+        }
+      },
+      "Xamarin.Facebook.LoginKit.iOS/4.35.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.LoginKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.LoginKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.MarketingKit.iOS/4.35.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.MarketingKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.MarketingKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.MessengerShareKit.iOS/1.3.2": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.MessengerShareKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.MessengerShareKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.PlacesKit.iOS/4.35.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.PlacesKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.PlacesKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.ShareKit.iOS/4.35.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.ShareKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.ShareKit.dll": {}
+        }
+      },
+      "Xamarin.FFImageLoading/2.4.4.859": {
+        "type": "package",
+        "dependencies": {
+          "WebP.Touch": "1.0.8"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/FFImageLoading.Platform.dll": {},
+          "lib/Xamarin.iOS10/FFImageLoading.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/FFImageLoading.Platform.dll": {},
+          "lib/Xamarin.iOS10/FFImageLoading.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Core/5.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.4.11"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Firebase.Core.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Firebase.Core.dll": {}
+        }
+      },
+      "Xamarin.Google.iOS.SignIn/4.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.4.11",
+          "Xamarin.Firebase.iOS.Core": "5.1.3"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Google.SignIn.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Google.SignIn.dll": {}
+        },
+        "build": {
+          "build/Xamarin.Google.iOS.SignIn.targets": {}
+        }
+      },
+      "Instagroom.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.4",
+        "dependencies": {
+          "Acr.UserDialogs": "6.5.1",
+          "MvvmCross.Core": "5.7.0",
+          "MvvmCross.Plugin.ResxLocalization": "5.7.0",
+          "Newtonsoft.Json": "12.0.1",
+          "SQLiteNetExtensions": "2.1.0",
+          "SQLiteNetExtensions.Async": "2.1.0",
+          "Xamarin.Auth": "1.6.0.4",
+          "sameerIOTApps.Plugin.SecureStorage": "2.5.0",
+          "sqlite-net-pcl": "1.5.231"
+        },
+        "compile": {
+          "bin/placeholder/Instagroom.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Instagroom.Core.dll": {}
+        }
+      }
+    },
+    "Xamarin.iOS,Version=v1.0/win": {
+      "Acr.Support/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Acr.Support.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Acr.Support.iOS.dll": {}
+        }
+      },
+      "Acr.UserDialogs/6.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Acr.Support": "[2.1.0, 3.0.0)",
+          "BTProgressHUD": "[1.2.0.5, 2.0.0)",
+          "Splat": "[2.0.0, 3.0.0)"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Acr.UserDialogs.Interface.dll": {},
+          "lib/Xamarin.iOS10/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Acr.UserDialogs.Interface.dll": {},
+          "lib/Xamarin.iOS10/Acr.UserDialogs.dll": {}
+        }
+      },
+      "BTProgressHUD/1.2.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/BTProgressHUD.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/BTProgressHUD.dll": {}
+        }
+      },
+      "Cirrious.FluentLayout/2.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Cirrious.FluentLayouts.Touch.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Cirrious.FluentLayouts.Touch.dll": {}
+        }
+      },
+      "MvvmCross.Binding/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Core": "[5.7.0]"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Binding.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Binding.iOS.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Localization.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Binding.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Binding.iOS.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Localization.dll": {}
+        }
+      },
+      "MvvmCross.Core/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Platform": "[5.7.0]"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Core.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Core.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.iOS.dll": {}
+        }
+      },
+      "MvvmCross.iOS.Support/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Binding": "[5.7.0]",
+          "MvvmCross.Core": "[5.7.0]",
+          "MvvmCross.Platform": "[5.7.0]"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.iOS.Support.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.iOS.Support.dll": {}
+        }
+      },
+      "MvvmCross.Platform/5.7.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Platform.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Platform.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Platform.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Platform.iOS.dll": {}
+        }
+      },
+      "MvvmCross.Plugin.DownloadCache/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Platform": "[5.7.0]",
+          "System.Collections.Immutable": "1.4.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.iOS.dll": {}
+        }
+      },
+      "MvvmCross.Plugin.ResxLocalization/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Binding": "[5.7.0]",
+          "MvvmCross.Platform": "[5.7.0]"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.ResxLocalization.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.ResxLocalization.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "sameerIOTApps.Plugin.SecureStorage/2.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.SecureStorage.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.SecureStorage.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.SecureStorage.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.SecureStorage.dll": {}
+        }
+      },
+      "Splat/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Splat.dll": {}
+        }
+      },
+      "sqlite-net-pcl/1.5.231": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.bundle_green": "1.1.11"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        }
+      },
+      "SQLiteNetExtensions/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
+          "sqlite-net-pcl": "1.4.118"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
+        }
+      },
+      "SQLiteNetExtensions.Async/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLiteNetExtensions": "2.0.0",
+          "sqlite-net-pcl": "1.4.118"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_green/1.1.11": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.11",
+          "SQLitePCLRaw.provider.sqlite3.ios_unified": "1.1.11"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.11": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.sqlite3.ios_unified/1.1.11": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.11"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
+        }
+      },
+      "System.Collections.Immutable/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+        }
+      },
+      "System.Net.Http/4.3.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "runtimes/win/lib/netstandard1.3/System.Net.Http.dll": {}
+        }
+      },
+      "WebP.Touch/1.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/WebP.Touch.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/WebP.Touch.dll": {}
+        }
+      },
+      "Xamarin.Auth/1.6.0.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Json"
+        ],
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Auth.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Auth.dll": {}
+        }
+      },
+      "Xamarin.Build.Download/0.4.11": {
+        "type": "package",
+        "build": {
+          "build/Xamarin.Build.Download.props": {},
+          "build/Xamarin.Build.Download.targets": {}
+        }
+      },
+      "Xamarin.Facebook.CoreKit.iOS/4.35.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.CoreKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.CoreKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.iOS/4.38.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0",
+          "Xamarin.Facebook.LoginKit.iOS": "4.35.0",
+          "Xamarin.Facebook.MarketingKit.iOS": "4.35.0",
+          "Xamarin.Facebook.MessengerShareKit.iOS": "1.3.2",
+          "Xamarin.Facebook.PlacesKit.iOS": "4.35.0",
+          "Xamarin.Facebook.ShareKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/_._": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/_._": {}
+        }
+      },
+      "Xamarin.Facebook.LoginKit.iOS/4.35.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.LoginKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.LoginKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.MarketingKit.iOS/4.35.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.MarketingKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.MarketingKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.MessengerShareKit.iOS/1.3.2": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.MessengerShareKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.MessengerShareKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.PlacesKit.iOS/4.35.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.PlacesKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.PlacesKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.ShareKit.iOS/4.35.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.ShareKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.ShareKit.dll": {}
+        }
+      },
+      "Xamarin.FFImageLoading/2.4.4.859": {
+        "type": "package",
+        "dependencies": {
+          "WebP.Touch": "1.0.8"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/FFImageLoading.Platform.dll": {},
+          "lib/Xamarin.iOS10/FFImageLoading.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/FFImageLoading.Platform.dll": {},
+          "lib/Xamarin.iOS10/FFImageLoading.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Core/5.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.4.11"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Firebase.Core.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Firebase.Core.dll": {}
+        }
+      },
+      "Xamarin.Google.iOS.SignIn/4.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.4.11",
+          "Xamarin.Firebase.iOS.Core": "5.1.3"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Google.SignIn.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Google.SignIn.dll": {}
+        },
+        "build": {
+          "build/Xamarin.Google.iOS.SignIn.targets": {}
+        }
+      },
+      "Instagroom.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.4",
+        "dependencies": {
+          "Acr.UserDialogs": "6.5.1",
+          "MvvmCross.Core": "5.7.0",
+          "MvvmCross.Plugin.ResxLocalization": "5.7.0",
+          "Newtonsoft.Json": "12.0.1",
+          "SQLiteNetExtensions": "2.1.0",
+          "SQLiteNetExtensions.Async": "2.1.0",
+          "Xamarin.Auth": "1.6.0.4",
+          "sameerIOTApps.Plugin.SecureStorage": "2.5.0",
+          "sqlite-net-pcl": "1.5.231"
+        },
+        "compile": {
+          "bin/placeholder/Instagroom.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Instagroom.Core.dll": {}
+        }
+      }
+    },
+    "Xamarin.iOS,Version=v1.0/win-x64": {
+      "Acr.Support/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Acr.Support.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Acr.Support.iOS.dll": {}
+        }
+      },
+      "Acr.UserDialogs/6.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Acr.Support": "[2.1.0, 3.0.0)",
+          "BTProgressHUD": "[1.2.0.5, 2.0.0)",
+          "Splat": "[2.0.0, 3.0.0)"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Acr.UserDialogs.Interface.dll": {},
+          "lib/Xamarin.iOS10/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Acr.UserDialogs.Interface.dll": {},
+          "lib/Xamarin.iOS10/Acr.UserDialogs.dll": {}
+        }
+      },
+      "BTProgressHUD/1.2.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/BTProgressHUD.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/BTProgressHUD.dll": {}
+        }
+      },
+      "Cirrious.FluentLayout/2.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Cirrious.FluentLayouts.Touch.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Cirrious.FluentLayouts.Touch.dll": {}
+        }
+      },
+      "MvvmCross.Binding/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Core": "[5.7.0]"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Binding.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Binding.iOS.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Localization.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Binding.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Binding.iOS.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Localization.dll": {}
+        }
+      },
+      "MvvmCross.Core/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Platform": "[5.7.0]"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Core.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Core.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.iOS.dll": {}
+        }
+      },
+      "MvvmCross.iOS.Support/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Binding": "[5.7.0]",
+          "MvvmCross.Core": "[5.7.0]",
+          "MvvmCross.Platform": "[5.7.0]"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.iOS.Support.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.iOS.Support.dll": {}
+        }
+      },
+      "MvvmCross.Platform/5.7.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Platform.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Platform.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Platform.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Platform.iOS.dll": {}
+        }
+      },
+      "MvvmCross.Plugin.DownloadCache/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Platform": "[5.7.0]",
+          "System.Collections.Immutable": "1.4.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.iOS.dll": {}
+        }
+      },
+      "MvvmCross.Plugin.ResxLocalization/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Binding": "[5.7.0]",
+          "MvvmCross.Platform": "[5.7.0]"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.ResxLocalization.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.ResxLocalization.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "sameerIOTApps.Plugin.SecureStorage/2.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.SecureStorage.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.SecureStorage.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.SecureStorage.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.SecureStorage.dll": {}
+        }
+      },
+      "Splat/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Splat.dll": {}
+        }
+      },
+      "sqlite-net-pcl/1.5.231": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.bundle_green": "1.1.11"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        }
+      },
+      "SQLiteNetExtensions/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
+          "sqlite-net-pcl": "1.4.118"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
+        }
+      },
+      "SQLiteNetExtensions.Async/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLiteNetExtensions": "2.0.0",
+          "sqlite-net-pcl": "1.4.118"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_green/1.1.11": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.11",
+          "SQLitePCLRaw.provider.sqlite3.ios_unified": "1.1.11"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.11": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.sqlite3.ios_unified/1.1.11": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.11"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
+        }
+      },
+      "System.Collections.Immutable/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+        }
+      },
+      "System.Net.Http/4.3.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "WebP.Touch/1.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/WebP.Touch.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/WebP.Touch.dll": {}
+        }
+      },
+      "Xamarin.Auth/1.6.0.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Json"
+        ],
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Auth.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Auth.dll": {}
+        }
+      },
+      "Xamarin.Build.Download/0.4.11": {
+        "type": "package",
+        "build": {
+          "build/Xamarin.Build.Download.props": {},
+          "build/Xamarin.Build.Download.targets": {}
+        }
+      },
+      "Xamarin.Facebook.CoreKit.iOS/4.35.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.CoreKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.CoreKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.iOS/4.38.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0",
+          "Xamarin.Facebook.LoginKit.iOS": "4.35.0",
+          "Xamarin.Facebook.MarketingKit.iOS": "4.35.0",
+          "Xamarin.Facebook.MessengerShareKit.iOS": "1.3.2",
+          "Xamarin.Facebook.PlacesKit.iOS": "4.35.0",
+          "Xamarin.Facebook.ShareKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/_._": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/_._": {}
+        }
+      },
+      "Xamarin.Facebook.LoginKit.iOS/4.35.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.LoginKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.LoginKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.MarketingKit.iOS/4.35.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.MarketingKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.MarketingKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.MessengerShareKit.iOS/1.3.2": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.MessengerShareKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.MessengerShareKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.PlacesKit.iOS/4.35.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.PlacesKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.PlacesKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.ShareKit.iOS/4.35.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.ShareKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.ShareKit.dll": {}
+        }
+      },
+      "Xamarin.FFImageLoading/2.4.4.859": {
+        "type": "package",
+        "dependencies": {
+          "WebP.Touch": "1.0.8"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/FFImageLoading.Platform.dll": {},
+          "lib/Xamarin.iOS10/FFImageLoading.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/FFImageLoading.Platform.dll": {},
+          "lib/Xamarin.iOS10/FFImageLoading.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Core/5.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.4.11"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Firebase.Core.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Firebase.Core.dll": {}
+        }
+      },
+      "Xamarin.Google.iOS.SignIn/4.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.4.11",
+          "Xamarin.Firebase.iOS.Core": "5.1.3"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Google.SignIn.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Google.SignIn.dll": {}
+        },
+        "build": {
+          "build/Xamarin.Google.iOS.SignIn.targets": {}
+        }
+      },
+      "Instagroom.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.4",
+        "dependencies": {
+          "Acr.UserDialogs": "6.5.1",
+          "MvvmCross.Core": "5.7.0",
+          "MvvmCross.Plugin.ResxLocalization": "5.7.0",
+          "Newtonsoft.Json": "12.0.1",
+          "SQLiteNetExtensions": "2.1.0",
+          "SQLiteNetExtensions.Async": "2.1.0",
+          "Xamarin.Auth": "1.6.0.4",
+          "sameerIOTApps.Plugin.SecureStorage": "2.5.0",
+          "sqlite-net-pcl": "1.5.231"
+        },
+        "compile": {
+          "bin/placeholder/Instagroom.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Instagroom.Core.dll": {}
+        }
+      }
+    },
+    "Xamarin.iOS,Version=v1.0/win-x86": {
+      "Acr.Support/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Acr.Support.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Acr.Support.iOS.dll": {}
+        }
+      },
+      "Acr.UserDialogs/6.5.1": {
+        "type": "package",
+        "dependencies": {
+          "Acr.Support": "[2.1.0, 3.0.0)",
+          "BTProgressHUD": "[1.2.0.5, 2.0.0)",
+          "Splat": "[2.0.0, 3.0.0)"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Acr.UserDialogs.Interface.dll": {},
+          "lib/Xamarin.iOS10/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Acr.UserDialogs.Interface.dll": {},
+          "lib/Xamarin.iOS10/Acr.UserDialogs.dll": {}
+        }
+      },
+      "BTProgressHUD/1.2.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/BTProgressHUD.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/BTProgressHUD.dll": {}
+        }
+      },
+      "Cirrious.FluentLayout/2.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Cirrious.FluentLayouts.Touch.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Cirrious.FluentLayouts.Touch.dll": {}
+        }
+      },
+      "MvvmCross.Binding/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Core": "[5.7.0]"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Binding.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Binding.iOS.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Localization.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Binding.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Binding.iOS.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Localization.dll": {}
+        }
+      },
+      "MvvmCross.Core/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Platform": "[5.7.0]"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Core.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Core.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.iOS.dll": {}
+        }
+      },
+      "MvvmCross.iOS.Support/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Binding": "[5.7.0]",
+          "MvvmCross.Core": "[5.7.0]",
+          "MvvmCross.Platform": "[5.7.0]"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.iOS.Support.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.iOS.Support.dll": {}
+        }
+      },
+      "MvvmCross.Platform/5.7.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Platform.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Platform.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Platform.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Platform.iOS.dll": {}
+        }
+      },
+      "MvvmCross.Plugin.DownloadCache/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Platform": "[5.7.0]",
+          "System.Collections.Immutable": "1.4.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.dll": {},
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.iOS.dll": {}
+        }
+      },
+      "MvvmCross.Plugin.ResxLocalization/5.7.0": {
+        "type": "package",
+        "dependencies": {
+          "MvvmCross.Binding": "[5.7.0]",
+          "MvvmCross.Platform": "[5.7.0]"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.ResxLocalization.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/MvvmCross.Plugins.ResxLocalization.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "sameerIOTApps.Plugin.SecureStorage/2.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.SecureStorage.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.SecureStorage.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.SecureStorage.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.SecureStorage.dll": {}
+        }
+      },
+      "Splat/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Splat.dll": {}
+        }
+      },
+      "sqlite-net-pcl/1.5.231": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.bundle_green": "1.1.11"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        }
+      },
+      "SQLiteNetExtensions/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1",
+          "sqlite-net-pcl": "1.4.118"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
+        }
+      },
+      "SQLiteNetExtensions.Async/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLiteNetExtensions": "2.0.0",
+          "sqlite-net-pcl": "1.4.118"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_green/1.1.11": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.11",
+          "SQLitePCLRaw.provider.sqlite3.ios_unified": "1.1.11"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.11": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.provider.sqlite3.ios_unified/1.1.11": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.11"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll": {}
+        }
+      },
+      "System.Collections.Immutable/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+        }
+      },
+      "System.Net.Http/4.3.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "WebP.Touch/1.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/WebP.Touch.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/WebP.Touch.dll": {}
+        }
+      },
+      "Xamarin.Auth/1.6.0.4": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Json"
+        ],
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Auth.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Auth.dll": {}
+        }
+      },
+      "Xamarin.Build.Download/0.4.11": {
+        "type": "package",
+        "build": {
+          "build/Xamarin.Build.Download.props": {},
+          "build/Xamarin.Build.Download.targets": {}
+        }
+      },
+      "Xamarin.Facebook.CoreKit.iOS/4.35.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.CoreKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.CoreKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.iOS/4.38.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0",
+          "Xamarin.Facebook.LoginKit.iOS": "4.35.0",
+          "Xamarin.Facebook.MarketingKit.iOS": "4.35.0",
+          "Xamarin.Facebook.MessengerShareKit.iOS": "1.3.2",
+          "Xamarin.Facebook.PlacesKit.iOS": "4.35.0",
+          "Xamarin.Facebook.ShareKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/_._": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/_._": {}
+        }
+      },
+      "Xamarin.Facebook.LoginKit.iOS/4.35.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.LoginKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.LoginKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.MarketingKit.iOS/4.35.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.MarketingKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.MarketingKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.MessengerShareKit.iOS/1.3.2": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.MessengerShareKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.MessengerShareKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.PlacesKit.iOS/4.35.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.PlacesKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.PlacesKit.dll": {}
+        }
+      },
+      "Xamarin.Facebook.ShareKit.iOS/4.35.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.CoreKit.iOS": "4.35.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.ShareKit.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.ShareKit.dll": {}
+        }
+      },
+      "Xamarin.FFImageLoading/2.4.4.859": {
+        "type": "package",
+        "dependencies": {
+          "WebP.Touch": "1.0.8"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/FFImageLoading.Platform.dll": {},
+          "lib/Xamarin.iOS10/FFImageLoading.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/FFImageLoading.Platform.dll": {},
+          "lib/Xamarin.iOS10/FFImageLoading.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Core/5.1.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.4.11"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Firebase.Core.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Firebase.Core.dll": {}
+        }
+      },
+      "Xamarin.Google.iOS.SignIn/4.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.4.11",
+          "Xamarin.Firebase.iOS.Core": "5.1.3"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Google.SignIn.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Google.SignIn.dll": {}
+        },
+        "build": {
+          "build/Xamarin.Google.iOS.SignIn.targets": {}
+        }
+      },
+      "Instagroom.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v1.4",
+        "dependencies": {
+          "Acr.UserDialogs": "6.5.1",
+          "MvvmCross.Core": "5.7.0",
+          "MvvmCross.Plugin.ResxLocalization": "5.7.0",
+          "Newtonsoft.Json": "12.0.1",
+          "SQLiteNetExtensions": "2.1.0",
+          "SQLiteNetExtensions.Async": "2.1.0",
+          "Xamarin.Auth": "1.6.0.4",
+          "sameerIOTApps.Plugin.SecureStorage": "2.5.0",
+          "sqlite-net-pcl": "1.5.231"
+        },
+        "compile": {
+          "bin/placeholder/Instagroom.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Instagroom.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Acr.Support/2.1.0": {
+      "sha512": "sxuarKBd5s1rDN3D4FvUaP4aYtubYf8QMkX8jdfyu7Ovzsp3v63cgWqkxkwaFr0k34r0B7UVA/svz752IvSCVQ==",
+      "type": "package",
+      "path": "acr.support/2.1.0",
+      "files": [
+        ".signature.p7s",
+        "acr.support.2.1.0.nupkg.sha512",
+        "acr.support.nuspec",
+        "lib/MonoAndroid10/Acr.Support.Android.dll",
+        "lib/MonoAndroid10/Acr.Support.Android.pdb",
+        "lib/Xamarin.iOS10/Acr.Support.iOS.dll",
+        "lib/Xamarin.tvOS10/Acr.Support.tvOS.dll",
+        "lib/Xamarin.tvOS10/Acr.Support.tvOS.dll.mdb",
+        "lib/Xamarin.tvOS10/Acr.Support.tvOS.pdb"
+      ]
+    },
+    "Acr.UserDialogs/6.5.1": {
+      "sha512": "5bWINVEuzR/tqN4wfxWLw5A0mfucus209DyYE17aAn+4djLX6IPdKVGRhSHJCKLbqQ2qhPV01yaN9mEhqn4P3w==",
+      "type": "package",
+      "path": "acr.userdialogs/6.5.1",
+      "files": [
+        ".signature.p7s",
+        "acr.userdialogs.6.5.1.nupkg.sha512",
+        "acr.userdialogs.nuspec",
+        "lib/MonoAndroid10/Acr.UserDialogs.Interface.dll",
+        "lib/MonoAndroid10/Acr.UserDialogs.Interface.pdb",
+        "lib/MonoAndroid10/Acr.UserDialogs.dll",
+        "lib/MonoAndroid10/Acr.UserDialogs.pdb",
+        "lib/Xamarin.iOS10/Acr.UserDialogs.Interface.dll",
+        "lib/Xamarin.iOS10/Acr.UserDialogs.Interface.pdb",
+        "lib/Xamarin.iOS10/Acr.UserDialogs.dll",
+        "lib/Xamarin.iOS10/Acr.UserDialogs.pdb",
+        "lib/netstandard1.1/Acr.UserDialogs.Interface.dll",
+        "lib/netstandard1.1/Acr.UserDialogs.Interface.pdb",
+        "lib/netstandard1.1/Acr.UserDialogs.deps.json",
+        "lib/netstandard1.1/Acr.UserDialogs.dll",
+        "lib/netstandard1.1/Acr.UserDialogs.pdb",
+        "lib/uap10.0/Acr.UserDialogs.Interface.dll",
+        "lib/uap10.0/Acr.UserDialogs.Interface.pdb",
+        "lib/uap10.0/Acr.UserDialogs.dll",
+        "lib/uap10.0/Acr.UserDialogs.pdb",
+        "lib/uap10.0/Acr.UserDialogs.pri",
+        "lib/uap10.0/Acr.UserDialogs/Acr.UserDialogs.xr.xml",
+        "lib/uap10.0/Acr.UserDialogs/ActionSheetContentDialog.xaml",
+        "lib/uap10.0/Acr.UserDialogs/DatePickerControl.xaml",
+        "lib/uap10.0/Acr.UserDialogs/LoginContentDialog.xaml",
+        "lib/uap10.0/Acr.UserDialogs/ProgressContentDialog.xaml",
+        "lib/uap10.0/Acr.UserDialogs/Properties/Acr.UserDialogs.rd.xml",
+        "lib/uap10.0/Acr.UserDialogs/TimePickerControl.xaml"
+      ]
+    },
+    "BTProgressHUD/1.2.0.5": {
+      "sha512": "Q00GSq+N45Y2aja6iEYAvTahbdHgT4hOhRXLWw7TLZI4P+bu4uaO5pqF2sG77HTd1O+BGY07xtBIu9Sj/ptyMQ==",
+      "type": "package",
+      "path": "btprogresshud/1.2.0.5",
+      "files": [
+        ".signature.p7s",
+        "btprogresshud.1.2.0.5.nupkg.sha512",
+        "btprogresshud.nuspec",
+        "lib/Xamarin.iOS10/BTProgressHUD.dll"
+      ]
+    },
+    "Cirrious.FluentLayout/2.9.0": {
+      "sha512": "XGbYgg+OcZB2um0AdctEx5BM7s0vnZm76yXx5YgHnD6/CBXNWMlKOl2EtGyZcviDjl4F4BO/ick4NyPuEIlyjA==",
+      "type": "package",
+      "path": "cirrious.fluentlayout/2.9.0",
+      "files": [
+        ".signature.p7s",
+        "cirrious.fluentlayout.2.9.0.nupkg.sha512",
+        "cirrious.fluentlayout.nuspec",
+        "lib/Xamarin.iOS10/Cirrious.FluentLayouts.Touch.dll"
+      ]
+    },
+    "MvvmCross.Binding/5.7.0": {
+      "sha512": "eil5Zg8XHSSMvEmVRhw+zYAmQ8bdNycxaKiQtnF+NOM5n9Ktqv4/F+02j17ObDeeuEFoxpN90b+yq3n6rHlA1A==",
+      "type": "package",
+      "path": "mvvmcross.binding/5.7.0",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid/MvvmCross.Binding.Droid.dll",
+        "lib/MonoAndroid/MvvmCross.Binding.Droid.pdb",
+        "lib/MonoAndroid/MvvmCross.Binding.dll",
+        "lib/MonoAndroid/MvvmCross.Binding.pdb",
+        "lib/MonoAndroid/MvvmCross.Localization.dll",
+        "lib/MonoAndroid/MvvmCross.Localization.pdb",
+        "lib/Xamarin.Mac20/MvvmCross.Binding.Mac.dll",
+        "lib/Xamarin.Mac20/MvvmCross.Binding.Mac.pdb",
+        "lib/Xamarin.Mac20/MvvmCross.Binding.dll",
+        "lib/Xamarin.Mac20/MvvmCross.Binding.pdb",
+        "lib/Xamarin.Mac20/MvvmCross.Localization.dll",
+        "lib/Xamarin.Mac20/MvvmCross.Localization.pdb",
+        "lib/Xamarin.iOS10/MvvmCross.Binding.dll",
+        "lib/Xamarin.iOS10/MvvmCross.Binding.iOS.dll",
+        "lib/Xamarin.iOS10/MvvmCross.Binding.iOS.pdb",
+        "lib/Xamarin.iOS10/MvvmCross.Binding.pdb",
+        "lib/Xamarin.iOS10/MvvmCross.Localization.dll",
+        "lib/Xamarin.iOS10/MvvmCross.Localization.pdb",
+        "lib/Xamarin.tvOS/MvvmCross.Binding.dll",
+        "lib/Xamarin.tvOS/MvvmCross.Binding.pdb",
+        "lib/Xamarin.tvOS/MvvmCross.Binding.tvOS.dll",
+        "lib/Xamarin.tvOS/MvvmCross.Localization.dll",
+        "lib/Xamarin.tvOS/MvvmCross.Localization.pdb",
+        "lib/dotnet/MvvmCross.Binding.dll",
+        "lib/dotnet/MvvmCross.Binding.pdb",
+        "lib/dotnet/MvvmCross.Localization.dll",
+        "lib/dotnet/MvvmCross.Localization.pdb",
+        "lib/net45/MvvmCross.Binding.Wpf.dll",
+        "lib/net45/MvvmCross.Binding.Wpf.pdb",
+        "lib/net45/MvvmCross.Binding.dll",
+        "lib/net45/MvvmCross.Binding.pdb",
+        "lib/net45/MvvmCross.Localization.dll",
+        "lib/net45/MvvmCross.Localization.pdb",
+        "lib/portable-net45+win+wpa81+wp80/MvvmCross.Binding.dll",
+        "lib/portable-net45+win+wpa81+wp80/MvvmCross.Binding.pdb",
+        "lib/portable-net45+win+wpa81+wp80/MvvmCross.Localization.dll",
+        "lib/portable-net45+win+wpa81+wp80/MvvmCross.Localization.pdb",
+        "lib/uap10.0/MvvmCross.Binding.Uwp.dll",
+        "lib/uap10.0/MvvmCross.Binding.Uwp.pdb",
+        "lib/uap10.0/MvvmCross.Binding.Uwp.pri",
+        "lib/uap10.0/MvvmCross.Binding.dll",
+        "lib/uap10.0/MvvmCross.Binding.pdb",
+        "lib/uap10.0/MvvmCross.Localization.dll",
+        "lib/uap10.0/MvvmCross.Localization.pdb",
+        "mvvmcross.binding.5.7.0.nupkg.sha512",
+        "mvvmcross.binding.nuspec"
+      ]
+    },
+    "MvvmCross.Core/5.7.0": {
+      "sha512": "QsmDsVh4EKudckde2sQu5hJ7rsOaidKMkDjT75CYGdwOYE4mpjR0qkiTzF+4xYHE4VzBz4C3c/NCYpUJQ6gkKQ==",
+      "type": "package",
+      "path": "mvvmcross.core/5.7.0",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid/MvvmCross.Core.dll",
+        "lib/MonoAndroid/MvvmCross.Core.pdb",
+        "lib/MonoAndroid/MvvmCross.Droid.dll",
+        "lib/MonoAndroid/MvvmCross.Droid.pdb",
+        "lib/Xamarin.Mac20/MvvmCross.Core.dll",
+        "lib/Xamarin.Mac20/MvvmCross.Core.pdb",
+        "lib/Xamarin.Mac20/MvvmCross.Mac.dll",
+        "lib/Xamarin.Mac20/MvvmCross.Mac.pdb",
+        "lib/Xamarin.iOS10/MvvmCross.Core.dll",
+        "lib/Xamarin.iOS10/MvvmCross.Core.pdb",
+        "lib/Xamarin.iOS10/MvvmCross.iOS.dll",
+        "lib/Xamarin.iOS10/MvvmCross.iOS.pdb",
+        "lib/Xamarin.tvOS/MvvmCross.Core.dll",
+        "lib/Xamarin.tvOS/MvvmCross.Core.pdb",
+        "lib/Xamarin.tvOS/MvvmCross.tvOS.dll",
+        "lib/dotnet/MvvmCross.Core.dll",
+        "lib/dotnet/MvvmCross.Core.pdb",
+        "lib/net45/MvvmCross.Core.dll",
+        "lib/net45/MvvmCross.Core.pdb",
+        "lib/net45/MvvmCross.Wpf.dll",
+        "lib/net45/MvvmCross.Wpf.pdb",
+        "lib/portable-net45+win+wpa81+wp80/MvvmCross.Core.dll",
+        "lib/portable-net45+win+wpa81+wp80/MvvmCross.Core.pdb",
+        "lib/uap10.0/MvvmCross.Core.dll",
+        "lib/uap10.0/MvvmCross.Core.pdb",
+        "lib/uap10.0/MvvmCross.Uwp.dll",
+        "lib/uap10.0/MvvmCross.Uwp.pdb",
+        "lib/uap10.0/MvvmCross.Uwp.pri",
+        "mvvmcross.core.5.7.0.nupkg.sha512",
+        "mvvmcross.core.nuspec"
+      ]
+    },
+    "MvvmCross.iOS.Support/5.7.0": {
+      "sha512": "EW6KyczJarD1i7zsTQTa1aW4gKKFTl8IYO3AHUdNa0m/5ifVojTrfTrsnwzFPNvzlL8ZBTIcybrFprLPVM4fwg==",
+      "type": "package",
+      "path": "mvvmcross.ios.support/5.7.0",
+      "files": [
+        ".signature.p7s",
+        "lib/Xamarin.iOS10/MvvmCross.iOS.Support.dll",
+        "lib/Xamarin.iOS10/MvvmCross.iOS.Support.pdb",
+        "mvvmcross.ios.support.5.7.0.nupkg.sha512",
+        "mvvmcross.ios.support.nuspec"
+      ]
+    },
+    "MvvmCross.Platform/5.7.0": {
+      "sha512": "IBcrI8jIFkb6zJsxDQEeH9tSiwBTbFhtLT00i3Gramm+P/nyf6beRIN+oQ1OGz2PizM0/EOQfYCk53gB/ezn4w==",
+      "type": "package",
+      "path": "mvvmcross.platform/5.7.0",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid/MvvmCross.Platform.Droid.dll",
+        "lib/MonoAndroid/MvvmCross.Platform.Droid.pdb",
+        "lib/MonoAndroid/MvvmCross.Platform.dll",
+        "lib/MonoAndroid/MvvmCross.Platform.pdb",
+        "lib/Xamarin.Mac20/MvvmCross.Platform.Mac.dll",
+        "lib/Xamarin.Mac20/MvvmCross.Platform.Mac.pdb",
+        "lib/Xamarin.Mac20/MvvmCross.Platform.dll",
+        "lib/Xamarin.Mac20/MvvmCross.Platform.pdb",
+        "lib/Xamarin.iOS10/MvvmCross.Platform.dll",
+        "lib/Xamarin.iOS10/MvvmCross.Platform.iOS.dll",
+        "lib/Xamarin.iOS10/MvvmCross.Platform.iOS.pdb",
+        "lib/Xamarin.iOS10/MvvmCross.Platform.pdb",
+        "lib/Xamarin.tvOS/MvvmCross.Platform.dll",
+        "lib/Xamarin.tvOS/MvvmCross.Platform.pdb",
+        "lib/Xamarin.tvOS/MvvmCross.Platform.tvOS.dll",
+        "lib/dotnet/MvvmCross.Platform.dll",
+        "lib/dotnet/MvvmCross.Platform.pdb",
+        "lib/net45/MvvmCross.Platform.Wpf.dll",
+        "lib/net45/MvvmCross.Platform.Wpf.pdb",
+        "lib/net45/MvvmCross.Platform.dll",
+        "lib/net45/MvvmCross.Platform.pdb",
+        "lib/portable-net45+win+wpa81+wp80/MvvmCross.Platform.dll",
+        "lib/portable-net45+win+wpa81+wp80/MvvmCross.Platform.pdb",
+        "lib/uap10.0/MvvmCross.Platform.Uwp.dll",
+        "lib/uap10.0/MvvmCross.Platform.Uwp.pdb",
+        "lib/uap10.0/MvvmCross.Platform.Uwp.pri",
+        "lib/uap10.0/MvvmCross.Platform.dll",
+        "lib/uap10.0/MvvmCross.Platform.pdb",
+        "mvvmcross.platform.5.7.0.nupkg.sha512",
+        "mvvmcross.platform.nuspec"
+      ]
+    },
+    "MvvmCross.Plugin.DownloadCache/5.7.0": {
+      "sha512": "UZGw1vyFM44F56PTHJZZCguf92DaFn3LXsW/s3BfaVMn41tdB+sM/n4M9WOfohJON5m+fwBL8RjGM6B1xXic8Q==",
+      "type": "package",
+      "path": "mvvmcross.plugin.downloadcache/5.7.0",
+      "files": [
+        ".signature.p7s",
+        "content/MonoAndroid/Bootstrap/DownloadCachePluginBootstrap.cs.pp",
+        "content/Xamarin.iOS10/Bootstrap/DownloadCachePluginBootstrap.cs.pp",
+        "lib/MonoAndroid/MvvmCross.Plugins.DownloadCache.Droid.dll",
+        "lib/MonoAndroid/MvvmCross.Plugins.DownloadCache.Droid.pdb",
+        "lib/MonoAndroid/MvvmCross.Plugins.DownloadCache.dll",
+        "lib/MonoAndroid/MvvmCross.Plugins.DownloadCache.pdb",
+        "lib/Xamarin.Mac20/MvvmCross.Plugins.DownloadCache.dll",
+        "lib/Xamarin.Mac20/MvvmCross.Plugins.DownloadCache.pdb",
+        "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.dll",
+        "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.iOS.dll",
+        "lib/Xamarin.iOS10/MvvmCross.Plugins.DownloadCache.pdb",
+        "lib/dotnet/MvvmCross.Plugins.DownloadCache.dll",
+        "lib/dotnet/MvvmCross.Plugins.DownloadCache.pdb",
+        "lib/portable-net45+win+wpa81+wp80/MvvmCross.Plugins.DownloadCache.dll",
+        "lib/portable-net45+win+wpa81+wp80/MvvmCross.Plugins.DownloadCache.pdb",
+        "mvvmcross.plugin.downloadcache.5.7.0.nupkg.sha512",
+        "mvvmcross.plugin.downloadcache.nuspec"
+      ]
+    },
+    "MvvmCross.Plugin.ResxLocalization/5.7.0": {
+      "sha512": "zhSub5zwXvJ56yI11SnRHhGZiTQX1Jv9svngDeMHrFUrX5Wqw/yCsyD5RyRp3pD4IzsZNNN0OY/GaPO70u0Pgg==",
+      "type": "package",
+      "path": "mvvmcross.plugin.resxlocalization/5.7.0",
+      "files": [
+        ".signature.p7s",
+        "content/MonoAndroid/Bootstrap/ResxLocalizationPluginBootstrap.cs.pp",
+        "content/Xamarin.iOS10/Bootstrap/ResxLocalizationPluginBootstrap.cs.pp",
+        "lib/MonoAndroid/MvvmCross.Plugins.ResxLocalization.dll",
+        "lib/MonoAndroid/MvvmCross.Plugins.ResxLocalization.pdb",
+        "lib/Xamarin.Mac20/MvvmCross.Plugins.ResxLocalization.dll",
+        "lib/Xamarin.Mac20/MvvmCross.Plugins.ResxLocalization.pdb",
+        "lib/Xamarin.iOS10/MvvmCross.Plugins.ResxLocalization.dll",
+        "lib/Xamarin.iOS10/MvvmCross.Plugins.ResxLocalization.pdb",
+        "lib/dotnet/MvvmCross.Plugins.ResxLocalization.dll",
+        "lib/dotnet/MvvmCross.Plugins.ResxLocalization.pdb",
+        "lib/portable-net45+win+wpa81+wp80/MvvmCross.Plugins.ResxLocalization.dll",
+        "lib/portable-net45+win+wpa81+wp80/MvvmCross.Plugins.ResxLocalization.pdb",
+        "mvvmcross.plugin.resxlocalization.5.7.0.nupkg.sha512",
+        "mvvmcross.plugin.resxlocalization.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/12.0.1": {
+      "sha512": "jmVyoEyk0In8r+AObYQyFKVFm7uSRzE0XSHSbEtBJcZDMV6DqJoyB4FLcHwprPVhAh826so0db3DIKXVnpGoPA==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.1",
+      "files": [
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.pdb",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.pdb",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.pdb",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.pdb",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.pdb",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.pdb",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.pdb",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.pdb",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.pdb",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec"
+      ]
+    },
+    "sameerIOTApps.Plugin.SecureStorage/2.5.0": {
+      "sha512": "zwZGuqEOA3kJdj+3Pmb3/2Ch/zvQUdvEuyae7lQbFx/gpTW31oTKHi/krUT+KbBx6EA6bRGT5EucEYSHO7yXHA==",
+      "type": "package",
+      "path": "sameeriotapps.plugin.securestorage/2.5.0",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid10/Plugin.SecureStorage.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.SecureStorage.dll",
+        "lib/UAP10/Plugin.SecureStorage.Abstractions.dll",
+        "lib/UAP10/Plugin.SecureStorage.dll",
+        "lib/Xamarin.Mac/Plugin.SecureStorage.Abstractions.dll",
+        "lib/Xamarin.Mac/Plugin.SecureStorage.dll",
+        "lib/Xamarin.iOS10/Plugin.SecureStorage.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.SecureStorage.dll",
+        "lib/netstandard1.0/Plugin.SecureStorage.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.SecureStorage.dll",
+        "lib/tizen40/Plugin.SecureStorage.Abstractions.dll",
+        "lib/tizen40/Plugin.SecureStorage.dll",
+        "sameeriotapps.plugin.securestorage.2.5.0.nupkg.sha512",
+        "sameeriotapps.plugin.securestorage.nuspec"
+      ]
+    },
+    "Splat/2.0.0": {
+      "sha512": "e6oHvtRpK7Ylyl0MBhNwrJm7OibMEHlWeqan1a5WGRB4mX90y621CdOVqM+Slm5+cx9nBl6CWGc2KY2nSBPoAg==",
+      "type": "package",
+      "path": "splat/2.0.0",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid403/Splat.dll",
+        "lib/Net45/Splat.dll",
+        "lib/Portable-Win81+Wpa81/Splat.dll",
+        "lib/Xamarin.Mac20/Splat.dll",
+        "lib/Xamarin.iOS10/Splat.dll",
+        "lib/netstandard1.1/Splat.dll",
+        "splat.2.0.0.nupkg.sha512",
+        "splat.nuspec",
+        "src/AssemblyFinder.cs",
+        "src/Bitmaps.cs",
+        "src/Logging.cs",
+        "src/MemoizingMRUCache.cs",
+        "src/ModeDetector.cs",
+        "src/PlatformModeDetector.cs",
+        "src/PointExtensions.cs",
+        "src/RectangleExtensions.cs",
+        "src/ReflectionStubs.cs",
+        "src/ServiceLocation.cs",
+        "src/SizeExtensions.cs",
+        "src/TypeForwardedSystemDrawing.cs"
+      ]
+    },
+    "sqlite-net-pcl/1.5.231": {
+      "sha512": "Sy+K+Wm2RZ+4b1uLHsaXvfR92Or71XxPXa2Id6msSOVkZKh+c+PUk/HQOAgxyhm3lhvysL0mK6Gd6mI69NJ9AA==",
+      "type": "package",
+      "path": "sqlite-net-pcl/1.5.231",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard1.1/SQLite-net.deps.json",
+        "lib/netstandard1.1/SQLite-net.dll",
+        "lib/netstandard1.1/SQLite-net.xml",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.xml",
+        "sqlite-net-pcl.1.5.231.nupkg.sha512",
+        "sqlite-net-pcl.nuspec"
+      ]
+    },
+    "SQLiteNetExtensions/2.1.0": {
+      "sha512": "X1ufKPcyQM7ExzdmdunHHSv+R3Pi7xeT9OG1wrPo6K2IR2Ku+VuEClQ1YlbxwfaKM4+NR4Ut2g0gHbJ5dllleA==",
+      "type": "package",
+      "path": "sqlitenetextensions/2.1.0",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard1.1/SQLiteNetExtensions.dll",
+        "lib/netstandard1.1/SQLiteNetExtensions.pdb",
+        "sqlitenetextensions.2.1.0.nupkg.sha512",
+        "sqlitenetextensions.nuspec",
+        "src/SQLiteNetExtensions/Attributes/CascadeOperation.cs",
+        "src/SQLiteNetExtensions/Attributes/ForeignKeyAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/ManyToManyAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/ManyToOneAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/OneToManyAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/OneToOneAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/TextBlobAttribute.cs",
+        "src/SQLiteNetExtensions/Exceptions/IncorrectRelationshipException.cs",
+        "src/SQLiteNetExtensions/Extensions/ReadOperations.cs",
+        "src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs",
+        "src/SQLiteNetExtensions/Extensions/TextBlob/ITextBlobSerializer.cs",
+        "src/SQLiteNetExtensions/Extensions/TextBlob/Serializers/JsonBlobSerializer.cs",
+        "src/SQLiteNetExtensions/Extensions/TextBlob/TextBlobOperations.cs",
+        "src/SQLiteNetExtensions/Extensions/WriteOperations.cs",
+        "src/SQLiteNetExtensions/Properties/AssemblyInfo.cs"
+      ]
+    },
+    "SQLiteNetExtensions.Async/2.1.0": {
+      "sha512": "f375b/KuTVE4F1LnuCldYqU/TL5qdxWvzNZKZPZQ4Oli3bcq1Ne5okobL9xoISJD2pMpMTjF2JT/lIlxpORusA==",
+      "type": "package",
+      "path": "sqlitenetextensions.async/2.1.0",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll",
+        "lib/netstandard1.1/SQLiteNetExtensionsAsync.pdb",
+        "sqlitenetextensions.async.2.1.0.nupkg.sha512",
+        "sqlitenetextensions.async.nuspec",
+        "src/SQLiteNetExtensions/Attributes/CascadeOperation.cs",
+        "src/SQLiteNetExtensions/Attributes/ForeignKeyAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/ManyToManyAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/ManyToOneAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/OneToManyAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/OneToOneAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs",
+        "src/SQLiteNetExtensions/Attributes/TextBlobAttribute.cs",
+        "src/SQLiteNetExtensions/Exceptions/IncorrectRelationshipException.cs",
+        "src/SQLiteNetExtensions/Extensions/ReadOperations.cs",
+        "src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs",
+        "src/SQLiteNetExtensions/Extensions/TextBlob/ITextBlobSerializer.cs",
+        "src/SQLiteNetExtensions/Extensions/TextBlob/Serializers/JsonBlobSerializer.cs",
+        "src/SQLiteNetExtensions/Extensions/TextBlob/TextBlobOperations.cs",
+        "src/SQLiteNetExtensions/Extensions/WriteOperations.cs",
+        "src/SQLiteNetExtensions/Properties/AssemblyInfo.cs"
+      ]
+    },
+    "SQLitePCLRaw.bundle_green/1.1.11": {
+      "sha512": "HOD1/Jg9VZtrOyPUCD9reQOXHq4r+fNe24qw5nghuiUcKch+9jePeRpt6MqGGUFhg2KW89KvE/RFlhpbfF8pKA==",
+      "type": "package",
+      "path": "sqlitepclraw.bundle_green/1.1.11",
+      "files": [
+        ".signature.p7s",
+        "build/wp8/SQLitePCLRaw.bundle_green.targets",
+        "build/wp80/arm/SQLitePCLRaw.batteries_green.dll",
+        "build/wp80/arm/SQLitePCLRaw.batteries_v2.dll",
+        "build/wp80/x86/SQLitePCLRaw.batteries_green.dll",
+        "build/wp80/x86/SQLitePCLRaw.batteries_v2.dll",
+        "lib/MonoAndroid/SQLitePCLRaw.batteries_green.dll",
+        "lib/MonoAndroid/SQLitePCLRaw.batteries_v2.dll",
+        "lib/Xamarin.Mac20/SQLitePCLRaw.batteries_green.dll",
+        "lib/Xamarin.Mac20/SQLitePCLRaw.batteries_v2.dll",
+        "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll",
+        "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net35/SQLitePCLRaw.batteries_green.dll",
+        "lib/net35/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net40/SQLitePCLRaw.batteries_green.dll",
+        "lib/net40/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net45/SQLitePCLRaw.batteries_green.dll",
+        "lib/net45/SQLitePCLRaw.batteries_v2.dll",
+        "lib/netcoreapp/SQLitePCLRaw.batteries_green.dll",
+        "lib/netcoreapp/SQLitePCLRaw.batteries_v2.dll",
+        "lib/netstandard1.1/SQLitePCLRaw.batteries_green.dll",
+        "lib/netstandard1.1/SQLitePCLRaw.batteries_v2.dll",
+        "lib/portable-net40+sl5+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll",
+        "lib/portable-net40+sl5+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/uap10.0/SQLitePCLRaw.batteries_green.dll",
+        "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/win8/SQLitePCLRaw.batteries_green.dll",
+        "lib/win8/SQLitePCLRaw.batteries_v2.dll",
+        "lib/win81/SQLitePCLRaw.batteries_green.dll",
+        "lib/win81/SQLitePCLRaw.batteries_v2.dll",
+        "lib/wp8/_._",
+        "lib/wpa81/SQLitePCLRaw.batteries_green.dll",
+        "lib/wpa81/SQLitePCLRaw.batteries_v2.dll",
+        "sqlitepclraw.bundle_green.1.1.11.nupkg.sha512",
+        "sqlitepclraw.bundle_green.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.core/1.1.11": {
+      "sha512": "bWiOso10I1vDuc5rbzT69LQT0+oXfYnoqx8vKJ8zim/CJ4ytSd20QNTE/FE0dvWEgXGnvDp7gGJFu6PeWnhx9g==",
+      "type": "package",
+      "path": "sqlitepclraw.core/1.1.11",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid/SQLitePCLRaw.core.dll",
+        "lib/Xamarin.Mac20/SQLitePCLRaw.core.dll",
+        "lib/Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/net35/SQLitePCLRaw.core.dll",
+        "lib/net40/SQLitePCLRaw.core.dll",
+        "lib/net45/SQLitePCLRaw.core.dll",
+        "lib/netstandard1.0/SQLitePCLRaw.core.dll",
+        "lib/netstandard1.1/SQLitePCLRaw.core.dll",
+        "lib/portable-net40+sl5+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/uap10.0/SQLitePCLRaw.core.dll",
+        "lib/win8/SQLitePCLRaw.core.dll",
+        "lib/win81/SQLitePCLRaw.core.dll",
+        "lib/wpa81/SQLitePCLRaw.core.dll",
+        "sqlitepclraw.core.1.1.11.nupkg.sha512",
+        "sqlitepclraw.core.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.provider.sqlite3.ios_unified/1.1.11": {
+      "sha512": "pgdrdeXCK6l5yLrRK9JjU0a6rVNJN64IKICKtDRI4zXc2Vv/4aBZNJfoivv/AFHaq/KJKR/1vAHI6mJTbeK8GA==",
+      "type": "package",
+      "path": "sqlitepclraw.provider.sqlite3.ios_unified/1.1.11",
+      "files": [
+        ".signature.p7s",
+        "lib/Xamarin.iOS10/SQLitePCLRaw.provider.sqlite3.dll",
+        "sqlitepclraw.provider.sqlite3.ios_unified.1.1.11.nupkg.sha512",
+        "sqlitepclraw.provider.sqlite3.ios_unified.nuspec"
+      ]
+    },
+    "System.Collections.Immutable/1.4.0": {
+      "sha512": "1aNA04B7wZWbZ8FgVg+Rg9vkzfQkmTwE1N6Lj3h14Gl8VupDS8j/mrfvv/FlQJL0ts8sMMKRgwnKntfQ1gQ3kQ==",
+      "type": "package",
+      "path": "system.collections.immutable/1.4.0",
+      "files": [
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Collections.Immutable.dll",
+        "lib/netstandard1.0/System.Collections.Immutable.xml",
+        "lib/netstandard2.0/System.Collections.Immutable.dll",
+        "lib/netstandard2.0/System.Collections.Immutable.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.xml",
+        "ref/netcoreapp2.0/_._",
+        "system.collections.immutable.1.4.0.nupkg.sha512",
+        "system.collections.immutable.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Net.Http/4.3.4": {
+      "sha512": "Fj7e73NNHwof97gFPTJuq8gv6G895yxkZt14DVnZdEh4gvKl8WrksCwNjIp/JeYX/yu/qxM/iOv9ai+ZY3Fp7Q==",
+      "type": "package",
+      "path": "system.net.http/4.3.4",
+      "files": [
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/Xamarinmac20/_._",
+        "lib/monoandroid10/_._",
+        "lib/monotouch10/_._",
+        "lib/net45/_._",
+        "lib/net46/System.Net.Http.dll",
+        "lib/portable-net45+win8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/Xamarinmac20/_._",
+        "ref/monoandroid10/_._",
+        "ref/monotouch10/_._",
+        "ref/net45/_._",
+        "ref/net46/System.Net.Http.dll",
+        "ref/netcore50/System.Net.Http.dll",
+        "ref/netstandard1.1/System.Net.Http.dll",
+        "ref/netstandard1.3/System.Net.Http.dll",
+        "ref/portable-net45+win8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netstandard1.6/System.Net.Http.dll",
+        "runtimes/win/lib/net46/System.Net.Http.dll",
+        "runtimes/win/lib/netcore50/System.Net.Http.dll",
+        "runtimes/win/lib/netstandard1.3/System.Net.Http.dll",
+        "system.net.http.4.3.4.nupkg.sha512",
+        "system.net.http.nuspec"
+      ]
+    },
+    "WebP.Touch/1.0.8": {
+      "sha512": "wzec/a8YZFrUvVSKeq0dgESJzcE72d68wdplpByX+hwWa66x89VyKYi8F3Ksto1cT+uEohxALU9fyLPIkOPL/g==",
+      "type": "package",
+      "path": "webp.touch/1.0.8",
+      "files": [
+        ".signature.p7s",
+        "lib/Xamarin.Mac20/WebP.Mac.dll",
+        "lib/Xamarin.Mac20/WebP.Mac.xml",
+        "lib/Xamarin.iOS10/WebP.Touch.dll",
+        "lib/Xamarin.iOS10/WebP.Touch.xml",
+        "webp.touch.1.0.8.nupkg.sha512",
+        "webp.touch.nuspec"
+      ]
+    },
+    "Xamarin.Auth/1.6.0.4": {
+      "sha512": "Z29LQBGqx9+QOJNU9ZHjuQt4L4S4z0k51IzKI9J3UGsNOd1w7/SqBBHvkGs799ImcR0B4ft8HpzwBpvwHggmUA==",
+      "type": "package",
+      "path": "xamarin.auth/1.6.0.4",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid10/Xamarin.Auth.dll",
+        "lib/Xamarin.iOS10/Xamarin.Auth.dll",
+        "lib/netstandard1.0/Xamarin.Auth.dll",
+        "lib/netstandard1.6/Xamarin.Auth.dll",
+        "lib/portable-net45 wp8 wpa81 win8 MonoAndroid10 MonoTouch10 XamarinIOS10/Xamarin.Auth.dll",
+        "lib/uap10.0/Xamarin.Auth.dll",
+        "lib/uap10.0/Xamarin.Auth.pri",
+        "lib/uap10.0/Xamarin.Auth/WebAuthenticatorPage.xbf",
+        "lib/uap10.0/Xamarin.Auth/Xamarin.Auth.xr.xml",
+        "lib/win81/Xamarin.Auth.dll",
+        "lib/win81/Xamarin.Auth.pri",
+        "lib/win81/Xamarin.Auth/WebAuthenticatorPage.xaml",
+        "lib/win81/Xamarin.Auth/WebAuthenticatorPage.xbf",
+        "lib/win81/Xamarin.Auth/Xamarin.Auth.xr.xml",
+        "lib/wp8/Xamarin.Auth.dll",
+        "lib/wpa81/Xamarin.Auth.dll",
+        "lib/wpa81/Xamarin.Auth.pri",
+        "lib/wpa81/Xamarin.Auth/WebAuthenticatorPage.xaml",
+        "lib/wpa81/Xamarin.Auth/WebAuthenticatorPage.xbf",
+        "lib/wpa81/Xamarin.Auth/Xamarin.Auth.xr.xml",
+        "xamarin.auth.1.6.0.4.nupkg.sha512",
+        "xamarin.auth.nuspec"
+      ]
+    },
+    "Xamarin.Build.Download/0.4.11": {
+      "sha512": "ujbXg6i04WGkDL/LkDanVkFmydJLNQav1lUz8ryxzKGVpiT5SSNXDwfYnGGYzkvAryz1S0gnIMtQrdKaxfHIXA==",
+      "type": "package",
+      "path": "xamarin.build.download/0.4.11",
+      "files": [
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/Mono.Cecil.dll",
+        "build/Newtonsoft.Json.dll",
+        "build/System.Net.Http.Formatting.dll",
+        "build/Xamarin.Build.Download.dll",
+        "build/Xamarin.Build.Download.props",
+        "build/Xamarin.Build.Download.targets",
+        "xamarin.build.download.0.4.11.nupkg.sha512",
+        "xamarin.build.download.nuspec"
+      ]
+    },
+    "Xamarin.Facebook.CoreKit.iOS/4.35.0": {
+      "sha512": "bQOxX+PnG9qxeWxeWYKLSknfNOWkplwXesWGq15zYaHL0qocXxOrIbv7tmzep524+H2O60tfWn4Oy+IBDWaTbQ==",
+      "type": "package",
+      "path": "xamarin.facebook.corekit.ios/4.35.0",
+      "files": [
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/Xamarin.iOS10/Facebook.CoreKit.dll",
+        "xamarin.facebook.corekit.ios.4.35.0.nupkg.sha512",
+        "xamarin.facebook.corekit.ios.nuspec"
+      ]
+    },
+    "Xamarin.Facebook.iOS/4.38.0": {
+      "sha512": "+uPkZQAk6L9jAuxUdtLEm/2nOIG4RAqpkfslAHIh8QpjZJldlO59YzrjDvltFHeR7SLhBKK1oYUBGx0NpJNbCA==",
+      "type": "package",
+      "path": "xamarin.facebook.ios/4.38.0",
+      "files": [
+        ".signature.p7s",
+        "lib/Xamarin.iOS10/_._",
+        "xamarin.facebook.ios.4.38.0.nupkg.sha512",
+        "xamarin.facebook.ios.nuspec"
+      ]
+    },
+    "Xamarin.Facebook.LoginKit.iOS/4.35.0": {
+      "sha512": "QiASiOIdkp2tpV19UTJtoG/uZp7h5PodQYjF5Acgz5lPRNeQYGbJ0ywDYB6EUbxTnkYn+8/dmv51enDSGXPE8A==",
+      "type": "package",
+      "path": "xamarin.facebook.loginkit.ios/4.35.0",
+      "files": [
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/Xamarin.iOS10/Facebook.LoginKit.dll",
+        "xamarin.facebook.loginkit.ios.4.35.0.nupkg.sha512",
+        "xamarin.facebook.loginkit.ios.nuspec"
+      ]
+    },
+    "Xamarin.Facebook.MarketingKit.iOS/4.35.0": {
+      "sha512": "W4zB/yAx4/3yO/EHfYttQUk7A+Iy9+e/figNb1q2uN+ncTH2kysp4mlTbBQzhfaBKhE7jHlO/8p+j7bgwcHmNw==",
+      "type": "package",
+      "path": "xamarin.facebook.marketingkit.ios/4.35.0",
+      "files": [
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/Xamarin.iOS10/Facebook.MarketingKit.dll",
+        "xamarin.facebook.marketingkit.ios.4.35.0.nupkg.sha512",
+        "xamarin.facebook.marketingkit.ios.nuspec"
+      ]
+    },
+    "Xamarin.Facebook.MessengerShareKit.iOS/1.3.2": {
+      "sha512": "nn28/wawnk4Dm5PhkYKujAndggJCVhiqcJtv8ghug79XOGnza3/t+wIubAMXn+7sJBkB2ugHRxI02T29k/L+Lg==",
+      "type": "package",
+      "path": "xamarin.facebook.messengersharekit.ios/1.3.2",
+      "files": [
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/Xamarin.iOS10/Facebook.MessengerShareKit.dll",
+        "xamarin.facebook.messengersharekit.ios.1.3.2.nupkg.sha512",
+        "xamarin.facebook.messengersharekit.ios.nuspec"
+      ]
+    },
+    "Xamarin.Facebook.PlacesKit.iOS/4.35.0": {
+      "sha512": "8upguphxFMT39gRojjJ7K21eiI4hYxdsSZtilEcaXarS/3/7WL//96QGvJGkqwg28dq/CdbVnsbMkaqzEfep5A==",
+      "type": "package",
+      "path": "xamarin.facebook.placeskit.ios/4.35.0",
+      "files": [
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/Xamarin.iOS10/Facebook.PlacesKit.dll",
+        "xamarin.facebook.placeskit.ios.4.35.0.nupkg.sha512",
+        "xamarin.facebook.placeskit.ios.nuspec"
+      ]
+    },
+    "Xamarin.Facebook.ShareKit.iOS/4.35.0": {
+      "sha512": "rma6QKVjsfPnJ9RwOkmxSBVDkjIhGg2Be46RzvPGD0L6ZEdl82HyJhEN0HHdBFpyILTjs018tq1U4MyvtRiTqw==",
+      "type": "package",
+      "path": "xamarin.facebook.sharekit.ios/4.35.0",
+      "files": [
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/Xamarin.iOS10/Facebook.ShareKit.dll",
+        "xamarin.facebook.sharekit.ios.4.35.0.nupkg.sha512",
+        "xamarin.facebook.sharekit.ios.nuspec"
+      ]
+    },
+    "Xamarin.FFImageLoading/2.4.4.859": {
+      "sha512": "/U71/oKIKL+ompfmdYsIYYi3+r3Sj+81zUxg29M1RuNPywKsPKbHIndGiRw8bEYi1CX6meeidIeBpetjnN/ETw==",
+      "type": "package",
+      "path": "xamarin.ffimageloading/2.4.4.859",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid10/FFImageLoading.Platform.dll",
+        "lib/MonoAndroid10/FFImageLoading.Platform.pdb",
+        "lib/MonoAndroid10/FFImageLoading.Platform.xml",
+        "lib/MonoAndroid10/FFImageLoading.dll",
+        "lib/MonoAndroid10/FFImageLoading.pdb",
+        "lib/MonoAndroid10/FFImageLoading.xml",
+        "lib/Xamarin.Mac20/FFImageLoading.Platform.dll",
+        "lib/Xamarin.Mac20/FFImageLoading.Platform.pdb",
+        "lib/Xamarin.Mac20/FFImageLoading.Platform.xml",
+        "lib/Xamarin.Mac20/FFImageLoading.dll",
+        "lib/Xamarin.Mac20/FFImageLoading.pdb",
+        "lib/Xamarin.Mac20/FFImageLoading.xml",
+        "lib/Xamarin.iOS10/FFImageLoading.Platform.dll",
+        "lib/Xamarin.iOS10/FFImageLoading.Platform.pdb",
+        "lib/Xamarin.iOS10/FFImageLoading.Platform.xml",
+        "lib/Xamarin.iOS10/FFImageLoading.dll",
+        "lib/Xamarin.iOS10/FFImageLoading.pdb",
+        "lib/Xamarin.iOS10/FFImageLoading.xml",
+        "lib/netstandard1.0/FFImageLoading.Platform.dll",
+        "lib/netstandard1.0/FFImageLoading.Platform.xml",
+        "lib/netstandard1.0/FFImageLoading.dll",
+        "lib/netstandard1.0/FFImageLoading.pdb",
+        "lib/netstandard1.0/FFImageLoading.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Platform.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.Platform.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.pdb",
+        "lib/portable-win+net45+wp80+win81+wpa81/FFImageLoading.xml",
+        "lib/tizen40/FFImageLoading.Platform.dll",
+        "lib/tizen40/FFImageLoading.Platform.pdb",
+        "lib/tizen40/FFImageLoading.Platform.xml",
+        "lib/tizen40/FFImageLoading.dll",
+        "lib/tizen40/FFImageLoading.pdb",
+        "lib/tizen40/FFImageLoading.xml",
+        "lib/uap/FFImageLoading.Platform.dll",
+        "lib/uap/FFImageLoading.Platform.pdb",
+        "lib/uap/FFImageLoading.Platform.xml",
+        "lib/uap/FFImageLoading.dll",
+        "lib/uap/FFImageLoading.pdb",
+        "lib/uap/FFImageLoading.xml",
+        "lib/win81/FFImageLoading.Platform.dll",
+        "lib/win81/FFImageLoading.Platform.pdb",
+        "lib/win81/FFImageLoading.Platform.xml",
+        "lib/win81/FFImageLoading.dll",
+        "lib/win81/FFImageLoading.pdb",
+        "lib/win81/FFImageLoading.xml",
+        "lib/wpa81/FFImageLoading.Platform.dll",
+        "lib/wpa81/FFImageLoading.Platform.pdb",
+        "lib/wpa81/FFImageLoading.Platform.xml",
+        "lib/wpa81/FFImageLoading.dll",
+        "lib/wpa81/FFImageLoading.pdb",
+        "lib/wpa81/FFImageLoading.xml",
+        "xamarin.ffimageloading.2.4.4.859.nupkg.sha512",
+        "xamarin.ffimageloading.nuspec"
+      ]
+    },
+    "Xamarin.Firebase.iOS.Core/5.1.3": {
+      "sha512": "zLQ8E844CYd5Z1vKh3SUMTeQuvmPsNxM3zRPAm6IVeuzw/wIHovOFZ6tXLltQeIXW3dEgABynsuQSXGCJCclwA==",
+      "type": "package",
+      "path": "xamarin.firebase.ios.core/5.1.3",
+      "files": [
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES",
+        "lib/Xamarin.iOS10/Firebase.Core.dll",
+        "xamarin.firebase.ios.core.5.1.3.nupkg.sha512",
+        "xamarin.firebase.ios.core.nuspec"
+      ]
+    },
+    "Xamarin.Google.iOS.SignIn/4.2.0": {
+      "sha512": "G/M9FxWgdQKwsFUHpoZkx6f+zHc09rKnBAzavpOWNyT/1DzzzyytsftEVMnes+fg2t+Bt+4tLy9A47y3Hpptew==",
+      "type": "package",
+      "path": "xamarin.google.ios.signin/4.2.0",
+      "files": [
+        ".signature.p7s",
+        "build/Xamarin.Google.iOS.SignIn.targets",
+        "lib/Xamarin.iOS10/Google.SignIn.dll",
+        "xamarin.google.ios.signin.4.2.0.nupkg.sha512",
+        "xamarin.google.ios.signin.nuspec"
+      ]
+    },
+    "Instagroom.Core/1.0.0": {
+      "type": "project",
+      "path": "../Instagroom.Core/Instagroom.Core.csproj",
+      "msbuildProject": "../Instagroom.Core/Instagroom.Core.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "Xamarin.iOS,Version=v1.0": [
+      "Cirrious.FluentLayout >= 2.9.0",
+      "Instagroom.Core >= 1.0.0",
+      "MvvmCross.Binding >= 5.7.0",
+      "MvvmCross.Platform >= 5.7.0",
+      "MvvmCross.Plugin.DownloadCache >= 5.7.0",
+      "MvvmCross.iOS.Support >= 5.7.0",
+      "System.Net.Http >= 4.3.4",
+      "Xamarin.FFImageLoading >= 2.4.4.859",
+      "Xamarin.Facebook.iOS >= 4.38.0",
+      "Xamarin.Google.iOS.SignIn >= 4.2.0",
+      "sameerIOTApps.Plugin.SecureStorage >= 2.5.0",
+      "sqlite-net-pcl >= 1.5.231"
+    ]
+  },
+  "packageFolders": {
+    "/Users/annabagriy/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.iOS/Instagroom.iOS.csproj",
+      "projectName": "Instagroom.iOS",
+      "projectPath": "/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.iOS/Instagroom.iOS.csproj",
+      "packagesPath": "/Users/annabagriy/.nuget/packages/",
+      "outputPath": "/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.iOS/obj",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/annabagriy/.config/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "xamarinios10"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "projectReferences": {
+            "/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.Core/Instagroom.Core.csproj": {
+              "projectPath": "/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.Core/Instagroom.Core.csproj"
+            }
+          }
+        }
+      }
+    },
+    "frameworks": {
+      "xamarinios10": {
+        "dependencies": {
+          "Cirrious.FluentLayout": {
+            "target": "Package",
+            "version": "[2.9.0, )"
+          },
+          "MvvmCross.Binding": {
+            "target": "Package",
+            "version": "[5.7.0, )"
+          },
+          "MvvmCross.Platform": {
+            "target": "Package",
+            "version": "[5.7.0, )"
+          },
+          "MvvmCross.Plugin.DownloadCache": {
+            "target": "Package",
+            "version": "[5.7.0, )"
+          },
+          "MvvmCross.iOS.Support": {
+            "target": "Package",
+            "version": "[5.7.0, )"
+          },
+          "System.Net.Http": {
+            "target": "Package",
+            "version": "[4.3.4, )"
+          },
+          "Xamarin.FFImageLoading": {
+            "target": "Package",
+            "version": "[2.4.4.859, )"
+          },
+          "Xamarin.Facebook.iOS": {
+            "target": "Package",
+            "version": "[4.38.0, )"
+          },
+          "Xamarin.Google.iOS.SignIn": {
+            "target": "Package",
+            "version": "[4.2.0, )"
+          },
+          "sameerIOTApps.Plugin.SecureStorage": {
+            "target": "Package",
+            "version": "[2.5.0, )"
+          },
+          "sqlite-net-pcl": {
+            "target": "Package",
+            "version": "[1.5.231, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

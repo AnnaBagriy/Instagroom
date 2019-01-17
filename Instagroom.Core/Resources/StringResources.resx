@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader
+        name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader
+        name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader
+        name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader
+        name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Login_UserName" xml:space="preserve">
+        <value>User Name</value>
+    </data>
+    <data name="Login_UserNamePlaceholder" xml:space="preserve">
+        <value>example@gmail.com</value>
+    </data>
+    <data name="Login_Password" xml:space="preserve">
+        <value>Password</value>
+    </data>
+    <data name="Login_ForgotPassword" xml:space="preserve">
+        <value>Forgot Password?</value>
+    </data>
+    <data name="Login_Login" xml:space="preserve">
+        <value>LOGIN</value>
+    </data>
+    <data name="Login_SignUp" xml:space="preserve">
+        <value>SIGN UP</value>
+    </data>
+    <data name="Login_ConnectWith" xml:space="preserve">
+        <value>or connect with</value>
+    </data>
+    <data name="SignUp_Email" xml:space="preserve">
+        <value>EMAIL</value>
+    </data>
+    <data name="SignUp_EmailPlaceholder" xml:space="preserve">
+        <value>Type email</value>
+    </data>
+    <data name="SignUp_FirstName" xml:space="preserve">
+        <value>FISRT NAME</value>
+    </data>
+    <data name="SignUp_FirstNamePlaceholder" xml:space="preserve">
+        <value>Type first name</value>
+    </data>
+    <data name="SignUp_LastName" xml:space="preserve">
+        <value>LAST NAME</value>
+    </data>
+    <data name="SignUp_LastNamePlaceholder" xml:space="preserve">
+        <value>Type last name</value>
+    </data>
+    <data name="SignUp_PasswordPlaceholder" xml:space="preserve">
+        <value>Create password</value>
+    </data>
+    <data name="SignUp_PasswordConfirmation" xml:space="preserve">
+        <value>PASSWORD CONFIRMATION</value>
+    </data>
+    <data name="SignUp_PasswordConfirmationPlaceholder" xml:space="preserve">
+        <value>Confirm password</value>
+    </data>
+    <data name="SignUp_Cancel" xml:space="preserve">
+        <value>Cancel</value>
+    </data>
+    
+    <data name="Message_WrongPassword" xml:space="preserve">
+        <value>Password must contain at least 6 characters, 1 number and 1 uppercase letter</value>
+    </data>
+    <data name="Message_EmptyPassword" xml:space="preserve">
+        <value>Password is required</value>
+    </data>
+    <data name="Message_WrongUserPassword" xml:space="preserve">
+        <value>Wrong password</value>
+    </data>
+    <data name="Message_WrongEmail" xml:space="preserve">
+        <value>Wrong email pattern</value>
+    </data>
+    <data name="Message_EmptyEmail" xml:space="preserve">
+        <value>Email is required</value>
+    </data>
+    <data name="Message_WrongPasswordConfirmation" xml:space="preserve">
+        <value>Passwords are not matching</value>
+    </data>
+    <data name="Message_EmptyFirstName" xml:space="preserve">
+        <value>First name is required</value>
+    </data>
+    <data name="Message_EmptyLastName" xml:space="preserve">
+        <value>Last name is required</value>
+    </data>
+    <data name="OK" xml:space="preserve">
+        <value>OK</value>
+    </data>
+    <data name="CANCEL" xml:space="preserve">
+        <value>Cancel</value>
+    </data>
+    <data name="ERROR" xml:space="preserve">
+        <value>Error!</value>
+    </data>
+    <data name="NoSuchUserExists" xml:space="preserve">
+        <value>Wrong email or password</value>
+    </data>
+</root>

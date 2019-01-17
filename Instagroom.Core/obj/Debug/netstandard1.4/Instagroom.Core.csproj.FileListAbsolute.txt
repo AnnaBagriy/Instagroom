@@ -1,0 +1,12 @@
+/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.Core/bin/Debug/netstandard1.4/Instagroom.Core.deps.json
+/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.Core/bin/Debug/netstandard1.4/Instagroom.Core.dll
+/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.Core/bin/Debug/netstandard1.4/Instagroom.Core.pdb
+/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.Core/obj/Debug/netstandard1.4/Instagroom.Core.Resources.StringResources.resources
+/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.Core/obj/Debug/netstandard1.4/Instagroom.Core.Resources.StringResources.ua.resources
+/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.Core/obj/Debug/netstandard1.4/Instagroom.Core.csproj.GenerateResource.cache
+/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.Core/obj/Debug/netstandard1.4/Instagroom.Core.csproj.CoreCompileInputs.cache
+/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.Core/obj/Debug/netstandard1.4/Instagroom.Core.AssemblyInfoInputs.cache
+/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.Core/obj/Debug/netstandard1.4/Instagroom.Core.AssemblyInfo.cs
+/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.Core/obj/Debug/netstandard1.4/Instagroom.Core.dll
+/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.Core/obj/Debug/netstandard1.4/Instagroom.Core.pdb
+/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.Core/obj/Debug/netstandard1.4/Instagroom.Core.csprojAssemblyReference.cache
