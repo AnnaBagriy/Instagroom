@@ -5,6 +5,7 @@ using MvvmCross.iOS.Views;
 using Foundation;
 using UIKit;
 using MvvmCross.Binding.BindingContext;
+using MvvmCross.Platform.Logging;
 
 #pragma warning disable 219
 

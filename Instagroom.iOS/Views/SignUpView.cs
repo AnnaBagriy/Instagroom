@@ -1,32 +1,23 @@
 ﻿using CoreAnimation;
 using CoreGraphics;
-using Foundation;
 using Instagroom.Core.Helpers;
+using Instagroom.Core.Resources;
 using Instagroom.Core.ViewModels;
-using Instagroom.iOS.Controls;
 using Instagroom.iOS.Extensions;
 using Instagroom.iOS.Helpers;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
-using System;
-using System.Linq;
 using UIKit;
 
 namespace Instagroom.iOS.Views {
     public partial class SignUpView : MvxViewController<SignUpViewModel> {
-        public SignUpView ( IntPtr handle ) : base ( handle ) {
-        }
-
-        protected SignUpView ( string nibName, NSBundle bundle ) : base ( "SignUpView", null ) {
-        }
-
         public override void ViewDidLoad () {
             base.ViewDidLoad ();
 
             SetBindings ();
             SetBackground ();
             SetColors ();
-            //SetText ();
+            SetText ();
             SetFonts ();
 
             passwordEntry.SecureTextEntry = true;
@@ -40,11 +31,6 @@ namespace Instagroom.iOS.Views {
 
             set.Bind ( signUpButton ).To ( vm => vm.SignUpButtonClickedCommand );
             set.Bind ( cancelButton ).To ( vm => vm.CancelButtonClickedCommand );
-
-            //foreach ( var view in View.Subviews.OfType<UITextFieldWithBottomLine> () ) {
-            //    set.Bind ( view ).For ( "Text" ).To ( vm => vm.ErrorMessages.ElementAt ( i ).Value );
-            //}
-
             set.Bind ( emailEntry ).To ( vm => vm.User.Email );
             set.Bind ( firstNameEntry ).To ( vm => vm.User.FirstName );
             set.Bind ( lastNameEntry ).To ( vm => vm.User.LastName );
@@ -94,18 +80,16 @@ namespace Instagroom.iOS.Views {
         }
 
         private void SetText () {
-            emailLabel.Text = NSBundle.MainBundle.GetLocalizedString ( "SignUp_Email" );
-            lastNameLabel.Text = NSBundle.MainBundle.GetLocalizedString ( "SignUp_LastName" );
-            passwordLabel.Text = NSBundle.MainBundle.GetLocalizedString ( "Login_Password" );
-            firstNameLabel.Text = NSBundle.MainBundle.GetLocalizedString ( "SignUp_FirstName" );
-            passwordConfirmationLabel.Text = NSBundle.MainBundle.GetLocalizedString ( "SignUp_PasswordConfirmation" );
-            emailEntry.Text = NSBundle.MainBundle.GetLocalizedString ( "SignUp_EmailPlaceholder" );
-            lastNameEntry.Text = NSBundle.MainBundle.GetLocalizedString ( "SignUp_LastNamePlaceholder" );
-            passwordEntry.Text = NSBundle.MainBundle.GetLocalizedString ( "SignUp_PasswordPlaceholder" );
-            firstNameEntry.Text = NSBundle.MainBundle.GetLocalizedString ( "SignUp_FirstNamePlaceholder" );
-            passwordConfirmationEntry.Text = NSBundle.MainBundle.GetLocalizedString ( "SignUp_PasswordConfirmationPlaceholder" );
-            cancelButton.TitleLabel.Text = NSBundle.MainBundle.GetLocalizedString ( "SignUp_Cancel" );
-            signUpButton.TitleLabel.Text = NSBundle.MainBundle.GetLocalizedString ( "Login_SignUp" );
+            emailLabel.Text = StringResources.SignUp_Email;
+            lastNameLabel.Text = StringResources.SignUp_LastName;
+            passwordLabel.Text = StringResources.Login_Password;
+            firstNameLabel.Text = StringResources.SignUp_FirstName;
+            passwordConfirmationLabel.Text = StringResources.SignUp_PasswordConfirmation;
+            emailEntry.Placeholder = StringResources.SignUp_EmailPlaceholder;
+            lastNameEntry.Placeholder = StringResources.SignUp_LastNamePlaceholder;
+            firstNameEntry.Placeholder = StringResources.SignUp_FirstNamePlaceholder;
+            cancelButton.TitleLabel.Text = StringResources.SignUp_Cancel;
+            signUpButton.TitleLabel.Text = StringResources.Login_SignUp;
         }
 
         #endregion

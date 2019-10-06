@@ -19,5 +19,9 @@ namespace Instagroom.iOS.Extensions {
         public static UIColor ToUIColor ( this Color color ) {
             return UIColor.FromRGB ( color.R, color.G, color.B );
         }
+
+        public static CGColor ToCGColor ( this Color color ) {
+            return UIColor.FromRGB ( color.R, color.G, color.B ).CGColor;
+        }
     }
 }

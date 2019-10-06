@@ -1,40 +1,25 @@
 ﻿using System;
 using Foundation;
-using Instagroom.Core.Models;
-using Instagroom.Core.ViewModels;
-using MvvmCross.Binding.ExtensionMethods;
+using Instagroom.iOS.Views.Cells;
 using MvvmCross.Binding.iOS.Views;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform.Core;
 using UIKit;
 
-namespace Instagroom.iOS.Controls {
+namespace Instagroom.iOS.Sources {
     public class SearchResultsTableViewSource : MvxTableViewSource {
+        private static readonly NSString PostCellIdentifier = UIUserCell.Key;
+
         public SearchResultsTableViewSource ( UITableView tableView ) : base ( tableView ) {
-        }
-
-        public override UITableViewCell GetCell ( UITableView tableView, NSIndexPath indexPath ) {
-            var item = ItemsSource.ElementAt ( indexPath.Row ) as UserCellViewModel;
-
-            return GetOrCreateCellFor ( tableView, indexPath, item );
+            tableView.RegisterNibForCellReuse ( 
+                UINib.FromName ( PostCellIdentifier, NSBundle.MainBundle ),
+                                 PostCellIdentifier );
         }
 
         protected override UITableViewCell GetOrCreateCellFor ( UITableView tableView, NSIndexPath indexPath, object item ) {
-            var cell = tableView.DequeueReusableCell ( UIUserCell.Key ) as UIUserCell;
-
-            if ( cell == null ) {
-                cell = UIUserCell.Create ();
-            }
-
-            var bindable = cell as IMvxDataConsumer;
-            if ( bindable != null )
-                bindable.DataContext = item;
-
-            return cell;
+            return tableView.DequeueReusableCell ( PostCellIdentifier ) as UIUserCell;
         }
 
         public override nfloat GetHeightForRow ( UITableView tableView, NSIndexPath indexPath ) {
-            return UITableView.AutomaticDimension;
+            return 44f;
         }
     }
 }

@@ -15,6 +15,7 @@ namespace Instagroom.Core.ViewModels {
     public class LoginViewModel : MvxViewModel {
         private readonly IMvxNavigationService _navigationService;
         private readonly IUserDataManager _userDataManager;
+        private readonly IUserDataRealmManager _userDataRealmManager;
         private readonly ISecureStorage _secureStorage;
         private readonly IFacebookLoginManager _facebookLoginManager;
         private readonly IGoogleLoginManager _googleLoginManager;
@@ -84,12 +85,14 @@ namespace Instagroom.Core.ViewModels {
         public LoginViewModel ( IMvxNavigationService navigationService,
                                 IUserDataManager userDataManager,
                                 IFacebookLoginManager facebookLoginManager,
-                                IGoogleLoginManager googleLoginManager ) {
+                                IGoogleLoginManager googleLoginManager,
+                                IUserDataRealmManager userDataRealmManager ) {
             _navigationService = navigationService;
             _userDataManager = userDataManager;
             _secureStorage = CrossSecureStorage.Current;
             _facebookLoginManager = facebookLoginManager;
             _googleLoginManager = googleLoginManager;
+            _userDataRealmManager = userDataRealmManager;
 
             User = new CurrentUserModel ();
         }
@@ -98,7 +101,12 @@ namespace Instagroom.Core.ViewModels {
         public async override void ViewCreated () {
             base.ViewCreated ();
 
-            var users = await _userDataManager.GetAllUsersAsync (); // to remove
+            //var users = await _userDataManager.GetAllUsersAsync (); // to remove
+            try {
+                var users = _userDataRealmManager.GetAllUsers ();
+            } catch ( Exception ex ) {
+
+            }
         }
 
         #region Private methods
@@ -108,11 +116,15 @@ namespace Instagroom.Core.ViewModels {
         }
 
         private async Task ExecuteLoginButtonClickedCommand () {
-            var response = await _userDataManager.GetLoginUserAsync ( User.Email, User.Password );
+            //var response = await _userDataManager.GetLoginUserAsync ( User.Email, User.Password );
+            var response = _userDataRealmManager.GetLoginUser ( User.Email, User.Password );
 
             if ( response.IsSuccess ) {
-                // Currently does not work
-                if ( !_secureStorage.HasKey ( ConstantHelper.UsernameKey ) && !_secureStorage.HasKey ( ConstantHelper.PasswordKey ) ) {
+                CurrentUser.User = response.Data;
+
+                if ( ( !_secureStorage.HasKey ( ConstantHelper.UsernameKey ) && !_secureStorage.HasKey ( ConstantHelper.PasswordKey ) ) ||
+                        _secureStorage.GetValue ( ConstantHelper.UsernameKey ) != User.Email ||
+                        _secureStorage.GetValue ( ConstantHelper.PasswordKey ) != User.Password ) {
 
                     _secureStorage.SetValue ( ConstantHelper.UsernameKey, response.Data.Email );
                     _secureStorage.SetValue ( ConstantHelper.PasswordKey, response.Data.Password );
@@ -134,7 +146,8 @@ namespace Instagroom.Core.ViewModels {
             if ( response.IsSuccess ) {
                 User = response.Data;
 
-                var responseForAdding = await _userDataManager.AddLoginUserAsync ( User );
+                //var responseForAdding = await _userDataManager.AddLoginUserAsync ( User );
+                var responseForAdding = _userDataRealmManager.AddNewUser ( User );
 
                 if ( responseForAdding.IsSuccess ) {
                     await _navigationService.Navigate<MainTabViewModel> ();
@@ -152,7 +165,8 @@ namespace Instagroom.Core.ViewModels {
             if ( response.IsSuccess ) {
                 User = response.Data;
 
-                var responseForAdding = await _userDataManager.AddLoginUserAsync ( User );
+                //var responseForAdding = await _userDataManager.AddLoginUserAsync ( User );
+                var responseForAdding = _userDataRealmManager.AddNewUser ( User );
 
                 if ( responseForAdding.IsSuccess ) {
                     await _navigationService.Navigate<MainTabViewModel> ();

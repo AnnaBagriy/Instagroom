@@ -104,4 +104,49 @@
     <data name="NoSuchUserExists" xml:space="preserve">
         <value>Wrong email or password</value>
     </data>
+    <data name="Post_Comments" xml:space="preserve">
+        <value>Comments</value>
+    </data>
+    <data name="AddComment_Placeholder" xml:space="preserve">
+        <value>Comments</value>
+    </data>
+    <data name="Search_SearchPlaceholder" xml:space="preserve">
+        <value>Search</value>
+    </data>
+    <data name="Post_Liked" xml:space="preserve">
+        <value>liked your photo</value>
+    </data>
+    <data name="Post_Commented" xml:space="preserve">
+        <value>commented your photo</value>
+    </data>
+    <data name="User_NewFollower" xml:space="preserve">
+        <value>liked your photo</value>
+    </data>
+    <data name="User_Follow" xml:space="preserve">
+        <value>Follow</value>
+    </data>
+    <data name="User_Following" xml:space="preserve">
+        <value>Following</value>
+    </data>
+    <data name="Profile_EditProfile" xml:space="preserve">
+        <value>Edit profile</value>
+    </data>
+    <data name="Profile_Posts" xml:space="preserve">
+        <value>posts</value>
+    </data>
+    <data name="Profile_Followers" xml:space="preserve">
+        <value>followers</value>
+    </data>
+    <data name="Profile_Following" xml:space="preserve">
+        <value>following</value>
+    </data>
+    <data name="NoLikedPosts" xml:space="preserve">
+        <value>You have not liked any posts</value>
+    </data>
+    <data name="NoPersonalPosts" xml:space="preserve">
+        <value>You have not posted any photos</value>
+    </data>
+    <data name="NoFollowing" xml:space="preserve">
+        <value>You have no people following</value>
+    </data>
 </root>

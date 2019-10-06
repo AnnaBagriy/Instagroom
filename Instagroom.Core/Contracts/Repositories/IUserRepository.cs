@@ -4,13 +4,15 @@ using Instagroom.Core.Models.Data;
 
 namespace Instagroom.Core.Contracts.Repositories {
     public interface IUserRepository {
-        Task AddUserAsync ( User item );
-        Task UpdateUserAsync ( User item );
-        Task<User> GetUserAsync ( int id );
-        Task<User> GetUserAsync ( string email );
-        Task<User> GetLoginUserAsync ( string email, string password );
-        Task<User> CheckUserIdentity ( string email, string password ); 
-        Task<IEnumerable<User>> GetAllUsersAsync ();
+        Task AddUserAsync ( UserTable item );
+        Task UpdateUserAsync ( UserTable item );
+        Task<UserTable> GetUserAsync ( int id );
+        Task<UserTable> GetUserAsync ( string email );
+        Task<UserTable> GetLoginUserAsync ( string email, string password );
+        Task<UserTable> CheckUserIdentity ( string email, string password ); 
+        Task<IEnumerable<UserTable>> GetAllUsersAsync ();
         Task DeleteUserAsync ( int id );
+
+        Task<List<UserTable>> FindUserByFilterAsync ( string filterString );
     }
 }

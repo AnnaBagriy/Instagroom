@@ -12,7 +12,9 @@ namespace Instagroom.Core.Models {
         public List<UserModel> Followers { get; set; }
         public List<UserModel> Following { get; set; }
         public List<PostModel> Posts { get; set; }
+        public List<PostModel> FollowingPosts { get; set; }
 
-        public List<PostModel> LikedPosts { get; set; }
+        public List<LikedPhotoModel> LikedPosts { get; set; }
+        public List<SavedPhotoModel> SavedPosts { get; set; }
     }
 }

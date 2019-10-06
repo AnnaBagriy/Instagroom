@@ -4,23 +4,26 @@ using Instagroom.Core.Models.Data;
 
 namespace Instagroom.Core.Contracts.Mappers {
     public interface IDatabaseMapper {
-        User ToUserFrom ( UserModel from );
-        User ToUserFrom ( CurrentUserModel from );
+        UserTable ToUserFrom ( UserModel from );
+        UserTable ToUserFrom ( CurrentUserModel from );
 
-        UserModel ToUserModelFrom ( User from );
-        IEnumerable<UserModel> ToUserModelFrom ( IEnumerable<User> from );
+        UserModel ToUserModelFrom ( UserTable from );
+        IEnumerable<UserModel> ToUserModelFrom ( IEnumerable<UserTable> from );
 
-        CurrentUserModel ToCurrentUserModelFrom ( User from );
+        CurrentUserModel ToCurrentUserModelFrom ( UserTable from );
 
-        Post ToPostFrom ( PostModel from );
-        PostModel ToPostModelFrom ( Post from );
-        IEnumerable<Post> ToPostFrom ( IEnumerable<PostModel> from );
-        IEnumerable<PostModel> ToPostModelFrom ( IEnumerable<Post> from );
+        PostTable ToPostFrom ( PostModel from );
+        PostModel ToPostModelFrom ( PostTable from );
+        IEnumerable<PostTable> ToPostFrom ( IEnumerable<PostModel> from );
+        IEnumerable<PostModel> ToPostModelFrom ( IEnumerable<PostTable> from );
 
-        Comment ToCommentFrom ( CommentModel from );
-        CommentModel ToCommentModelFrom ( Comment from );
+        CommentTable ToCommentFrom ( CommentModel from );
+        CommentModel ToCommentModelFrom ( CommentTable from );
 
-        Like ToLikeFrom ( LikeModel from );
-        LikeModel ToLikeModelFrom ( Like from );
+        LikedPhotoModel ToPostModelFrom ( LikedPostTable from );
+        SavedPhotoModel ToPostModelFrom ( SavedPostTable from );
+
+        LikeTable ToLikeFrom ( LikeModel from );
+        LikeModel ToLikeModelFrom ( LikeTable from );
     }
 }

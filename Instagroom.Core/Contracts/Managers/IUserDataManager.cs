@@ -15,5 +15,7 @@ namespace Instagroom.Core.Contracts.Managers {
         Task<DatabaseResponseWithData<CurrentUserModel>> CheckUserIdentityAsync ( string email, string password );
         Task<DatabaseResponseWithData<IEnumerable<UserModel>>> GetAllUsersAsync ();
         Task<DatabaseResponseWithoutData> DeleteUserAsync ( int id );
+
+        Task<DatabaseResponseWithData<List<UserModel>>> SearchUsersByFilterAsync ( string filter );
     }
 }

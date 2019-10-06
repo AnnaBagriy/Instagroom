@@ -8,7 +8,7 @@ using Foundation;
 using System;
 using System.CodeDom.Compiler;
 
-namespace Instagroom.iOS.Controls
+namespace Instagroom.iOS.Views.Cells
 {
     [Register ("UIUserCell")]
     partial class UIUserCell
@@ -21,6 +21,10 @@ namespace Instagroom.iOS.Controls
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel usernameLabel { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView userPhoto { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (bioLabel != null) {
@@ -31,6 +35,11 @@ namespace Instagroom.iOS.Controls
             if (usernameLabel != null) {
                 usernameLabel.Dispose ();
                 usernameLabel = null;
+            }
+
+            if (userPhoto != null) {
+                userPhoto.Dispose ();
+                userPhoto = null;
             }
         }
     }

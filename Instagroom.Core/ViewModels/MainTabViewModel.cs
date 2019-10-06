@@ -1,28 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using MvvmCross.Core.Navigation;
+﻿using System.Threading.Tasks;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 
 namespace Instagroom.Core.ViewModels {
     public class MainTabViewModel : MvxViewModel {
-        private readonly IMvxNavigationService _navigationService;
-        private List<MvxViewModel> _mainTabViewChildren;
-
-        public List<MvxViewModel> MainTabViewChildren {
-            get => _mainTabViewChildren;
-            set => SetProperty ( ref _mainTabViewChildren, value );
-        }
-
-        public MainTabViewModel ( IMvxNavigationService navigationService) {
-            _navigationService = navigationService;
-        }
+        public MvxViewModel PostsVM { get; set; }
+        public MvxViewModel SearchVM { get; set; }
+        public MvxViewModel CameraVM { get; set; }
+        public MvxViewModel FavouritesVM { get; set; }
+        public MvxViewModel ProfileVM { get; set; }
 
         public MainTabViewModel () {
-            MainTabViewChildren = new List<MvxViewModel> ()
-            {
-                //new PostsViewModel(_navigationService ),
-
-            };
+            PostsVM = Mvx.IocConstruct<PostsViewModel> ();
+            SearchVM = Mvx.IocConstruct<SearchViewModel> ();
+            CameraVM = Mvx.IocConstruct<CameraViewModel> ();
+            FavouritesVM = Mvx.IocConstruct<FavouritesViewModel> ();
+            ProfileVM = Mvx.IocConstruct<CurrentUserProfileViewModel> ();
         }
     }
 }

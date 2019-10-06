@@ -1,138 +1,151 @@
 ﻿using System;
-using System.Net.Http;
-using System.Threading.Tasks;
+using System.ComponentModel;
+using CoreGraphics;
 using Foundation;
 using Instagroom.Core.Helpers;
 using Instagroom.Core.Models;
+using Instagroom.Core.Structures;
 using Instagroom.iOS.Extensions;
 using Instagroom.iOS.Helpers;
-using Instagroom.iOS.Converters;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.iOS.Views;
 using UIKit;
-using FFImageLoading.Cross;
-using Cirrious.FluentLayouts.Touch;
 
-namespace Instagroom.iOS.Controls {
+namespace Instagroom.iOS.Views.Cells {
+    [DesignTimeVisible ( true )]
     public partial class UIPostCell : MvxTableViewCell {
+        private bool _isSaveButtonEnabled;
+        private bool _isLikeButtonEnabled;
+
         public static readonly NSString Key = new NSString ( "UIPostCell" );
         public static readonly UINib Nib;
 
-        private readonly MvxCachedImageView _postImageControl;
-        private readonly MvxCachedImageView _userImageControl;
-
-        private bool _constraintsCreated;
-
-        static UIPostCell () {
-            Nib = UINib.FromName ( "UIPostCell", NSBundle.MainBundle );
+        public UIPostCell ( IntPtr handle ) : base ( handle ) {
         }
 
-        protected UIPostCell ( IntPtr handle ) : base ( handle ) {
-            _postImageControl = new MvxCachedImageView ();
-            _userImageControl = new MvxCachedImageView ();
-
-            _postImageControl.ErrorPlaceholderImagePath = "res:instagroomLogo";
-            _postImageControl.LoadingPlaceholderImagePath = "res:instagroomLogo";
-            _userImageControl.ErrorPlaceholderImagePath = "res:icUser";
-            _userImageControl.LoadingPlaceholderImagePath = "res:icUser";
-
-            //AddSubviews ( new UIView[] { _postImageControl, _userImageControl } );
-            //SubviewsDoNotTranslateAutoresizingMaskIntoConstraints ();
-            TranslatesAutoresizingMaskIntoConstraints = false;
-
-            SetNeedsUpdateConstraints ();
-
-            this.DelayBind ( () => {
-                SetBindings ();
-                SetColors ();
-                SetFonts ();
-                //SetText ();
-            } );
-        }
-
-        public static UIPostCell Create () {
-            return ( UIPostCell ) Nib.Instantiate ( null, null )[0];
-        }
-
-        public override void PrepareForReuse () {
-            base.PrepareForReuse ();
-        }
+        #region Settings
 
         private void SetBindings () {
-            var set = this.CreateBindingSet<UIPostCell, PostModel> ();
+            var set = this.CreateBindingSet<UIPostCell, LikedPhotoModel> ();
 
-            set.Bind ( _postImageControl ).For ( v => v.ImagePath ).To ( post => post.Image );
-            set.Bind ( _userImageControl ).For ( v => v.ImagePath ).To ( u => ( u.User.Avatar ) );
-            set.Bind ( descriptionLabel ).To ( post => post.Desription );
-            set.Bind ( timeAddedLabel ).To ( post => post.DateCreated ).WithConversion ( "TimeAgo" );
+            set.Bind ( postImage ).To ( post => post.Post.Image ).WithConversion( "ToUIImageView", new PostModel() );
+            set.Bind ( userPhoto ).To ( post => post.User.Avatar ).WithConversion ( "ToUIImageView", new UserModel () );
+            set.Bind ( descriptionLabel ).To ( post => post.Post.Desription );
+            set.Bind ( timeAddedLabel ).To ( post => post.Post.DateCreated ).WithConversion ( "TimeAgo" );
             set.Bind ( usernameLabel ).To ( post => post.User.UserName );
+            set.Bind ( this ).For ( v => v._isLikeButtonEnabled ).To ( post => post.Post.IsLiked );
+            set.Bind ( this ).For ( v => v._isSaveButtonEnabled ).To ( post => post.Post.IsSaved );
 
             set.Apply ();
         }
 
-        public override void UpdateConstraints () {
-            if ( !_constraintsCreated ) {
-                //AddConstraints (
-                //    _postImageControl.WithSameCenterY ( this ),
-                //    _postImageControl.WithSameCenterX ( this ),
-                //    _postImageControl.Width ().EqualTo ( 344f ),
-                //    _postImageControl.Height ().EqualTo ( 180f ),
-
-                //    _userImageControl.Width ().EqualTo ( 30f ),
-                //    _userImageControl.Height ().EqualTo ( 30f ),
-                //    _userImageControl.WithSameCenterY ( bookmarkButton )
-                //);
-
-                //_postImageControl.WithSameCenterX ( this );
-                //_postImageControl.Width ().EqualTo ( 344f );
-                //_postImageControl.Height ().EqualTo ( 180f );
-
-                //_postImageControl.LeadingAnchor.ConstraintEqualTo ( TrailingAnchor, 16 ).Active = true;
-                //_postImageControl.TrailingAnchor.ConstraintEqualTo ( LeadingAnchor, 16 ).Active = true;
-                //_postImageControl.TopAnchor.ConstraintEqualTo ( TopAnchor, 16 ).Active = true;
-                //_postImageControl.BottomAnchor.ConstraintEqualTo ( usernameLabel.TopAnchor, 10 ).Active = true;
-                //_postImageControl.BottomAnchor.ConstraintEqualTo ( bookmarkButton.TopAnchor, 16 ).Active = true;
-                //_postImageControl.BottomAnchor.ConstraintEqualTo ( likeButton.TopAnchor, 16 ).Active = true;
-
-                //_userImageControl.LeadingAnchor.ConstraintEqualTo ( ContentView.TrailingAnchor, 16 ).Active = true;
-                //_userImageControl.TrailingAnchor.ConstraintEqualTo ( usernameLabel.LeadingAnchor, 12 ).Active = true;
-                //_userImageControl.TopAnchor.ConstraintEqualTo ( _postImageControl.BottomAnchor, 10 ).Active = true;
-                //_userImageControl.BottomAnchor.ConstraintEqualTo ( descriptionLabel.TopAnchor, 10 ).Active = true;
-
-                //usernameLabel.TopAnchor.ConstraintEqualTo ( _postImageControl.BottomAnchor, 10 ).Active = true;
-
-                _constraintsCreated = true;
-            }
-
-            base.UpdateConstraints ();
-        }
-
         private void SetColors () {
+            timeAddedLabel.TextColor = ColorHelper.Greyish.ToUIColor ();
+            usernameLabel.TextColor = ColorHelper.GreyishBrown.ToUIColor ();
+            descriptionLabel.TextColor = ColorHelper.GreyishBrownTwo.ToUIColor ();
             commentsButton.SetTitleColor ( ColorHelper.TealBlue.ToUIColor (), UIControlState.Normal );
-        }
 
-        private void SetText () {
-            throw new NotImplementedException ();
+            saveButton.TintColor = ColorHelper.Ocean.ToUIColor ();
+            likeButton.TintColor = ColorHelper.Ocean.ToUIColor ();
         }
 
         private void SetFonts () {
             usernameLabel.Font = UIFont.FromName ( FontHelper.Roboto_Medium, 14 );
             timeAddedLabel.Font = UIFont.FromName ( FontHelper.Roboto_Regular, 12 );
             descriptionLabel.Font = UIFont.FromName ( FontHelper.Roboto_Regular, 14 );
-
-            commentsButton.Font = UIFont.FromName ( FontHelper.Roboto_Regular, 10 );
+            commentsButton.TitleLabel.Font = UIFont.FromName ( FontHelper.Roboto_Regular, 10 );
         }
 
-        public static async Task<UIImage> LoadImageFromURL ( string imageUrl ) {
-            var httpClient = new HttpClient ();
+        private void SetImages () {
+            if ( _isLikeButtonEnabled ) {
+                likeButton.SetImage ( UIImage.FromBundle ( "icBookmarkSelected" ), UIControlState.Normal );
+            }
+            if ( _isSaveButtonEnabled ) {
+                saveButton.SetImage ( UIImage.FromBundle ( "icHeartSelected" ), UIControlState.Normal );
+            }
 
-            Task<byte[]> contentsTask = httpClient.GetByteArrayAsync ( imageUrl );
+            //saveButton.TouchUpInside += SaveButton_TouchUpInside;
+            //likeButton.TouchUpInside += LikeButton_TouchUpInside;
+        }
 
-            // await! control returns to the caller and the task continues to run on another thread
-            var contents = await contentsTask;
+        #endregion
 
-            // load from bytes
-            return UIImage.LoadFromData ( NSData.FromArray ( contents ) );
+        #region Overrides
+
+        public override void LayoutSubviews () {
+            base.LayoutSubviews ();
+
+            SetBindings ();
+            SetColors ();
+            SetFonts ();
+            SetImages ();
+
+            userPhoto.Layer.MasksToBounds = true;
+            userPhoto.Layer.CornerRadius = userPhoto.Frame.Height / 2;
+
+            //postImage.Layer.MasksToBounds = true;
+            ResizePhotoView ( postImage );
+            ImageHelper.RoundPhoto ( userPhoto );
+        }
+
+        #endregion
+
+        private void LikeButton_TouchUpInside ( object sender, EventArgs e ) {
+            _isLikeButtonEnabled = !_isLikeButtonEnabled;
+
+            SetImages ();
+        }
+
+
+        private void SaveButton_TouchUpInside ( object sender, EventArgs e ) {
+            _isSaveButtonEnabled = !_isSaveButtonEnabled;
+
+            SetImages ();
+        }
+
+        private void ResizePhotoView ( UIImageView imageView ) {
+            var imageHeight = imageView.Image.Size.Height;
+            var imageWidth = imageView.Image.Size.Width;
+
+            var imageViewSize = imageView.Frame.Size;
+            var imageSize = imageView.Image?.Size;
+
+            var scaleWidth = imageViewSize.Width / imageSize.Value.Width;
+            var scaleHeight = imageViewSize.Height / imageSize.Value.Height;
+            var aspect = Math.Min ( scaleWidth, scaleHeight );
+
+            var imageRect = new CGRect ( 0, 0, imageSize.Value.Width * aspect, imageSize.Value.Height * aspect );
+
+            //imageRect. = ( imageViewSize.width - imageRect.size.width ) / 2;
+            //imageRect.origin.y = ( imageViewSize.height - imageRect.size.height ) / 2;
+
+            double scaleFactor = imageWidth / imageView.Frame.Width;
+            var requiredHeight = imageHeight / scaleFactor;
+
+            var newSize = new CGSize ( imageView.Frame.Width, 300 );
+
+            var aspectSize = CGSizeAspectFill ( imageView.Image.Size, minimumSize: newSize );
+            var newRect = new CGRect ( ( newSize.Width - aspectSize.Width ) / 2, 
+                                       ( newSize.Height - aspectSize.Height ) / 2, 
+                                         aspectSize.Width, 
+                                         aspectSize.Height );
+
+            photoHeightConstraint.Constant = ( nfloat ) newRect.Height;
+        }
+
+        private CGSize CGSizeAspectFill ( CGSize aspectRatio, CGSize minimumSize ) {
+            var aspectFillSize = minimumSize;
+
+            var mW = minimumSize.Width / aspectRatio.Width;
+            var mH = minimumSize.Height / aspectRatio.Height;
+
+            if ( mH > mW ) {
+                aspectFillSize.Width = mH * aspectRatio.Width;
+            } else if ( mW > mH ) {
+                aspectFillSize.Height = mW * aspectRatio.Height;
+            }
+
+            return aspectFillSize;
         }
     }
 }

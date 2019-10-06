@@ -1,6 +1,9 @@
-﻿namespace Instagroom.Core.Models {
+﻿using System;
+
+namespace Instagroom.Core.Models {
     public class LikeModel : BaseModel {
-        public int UserId { get; set; }
-        public int AuthorId { get; set; }
+        public PostModel Post { get; set; }
+        public UserModel Author { get; set; }
+        public DateTimeOffset WhenLiked { get; set; }
     }
 }

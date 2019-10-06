@@ -31,6 +31,7 @@ namespace Instagroom.iOS {
         protected override void InitializeFirstChance () {
             base.InitializeFirstChance ();
 
+            Mvx.RegisterSingleton<ICameraService> ( new CameraService () );
             Mvx.RegisterSingleton<ILocalizeService> ( new LocalizeService() );
             Mvx.RegisterSingleton<IDatabaseService> ( new DatabaseService () );
             Mvx.RegisterSingleton<IFacebookLoginService> ( new FacebookLoginService () );
@@ -41,6 +42,7 @@ namespace Instagroom.iOS {
             base.FillValueConverters ( registry );
 
             registry.AddOrOverwrite ( "TimeAgo", new PostCreationDateConverter() );
+            registry.AddOrOverwrite ( "ToUIImageView", new ImagePathToUIImageViewConverter () );
         }
 
         protected override void InitializeLastChance () {

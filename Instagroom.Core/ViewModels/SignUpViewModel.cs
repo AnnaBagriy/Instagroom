@@ -15,6 +15,7 @@ namespace Instagroom.Core.ViewModels {
         private readonly IMvxNavigationService _navigationService;
         private readonly IUserDataManager _userDataManager;
         private readonly IDatabaseMapper _databaseMapper;
+        private readonly IUserDataRealmManager _userDataRealmManager;
 
         private CurrentUserModel _user;
         private ICommand _signUpButtonClickedCommand;
@@ -47,10 +48,12 @@ namespace Instagroom.Core.ViewModels {
 
         public SignUpViewModel ( IMvxNavigationService navigationService,
                                  IUserDataManager userDataManager,
-                                 IDatabaseMapper databaseMapper ) {
+                                 IDatabaseMapper databaseMapper,
+                                 IUserDataRealmManager userDataRealmManager ) {
             _navigationService = navigationService;
             _userDataManager = userDataManager;
             _databaseMapper = databaseMapper;
+            _userDataRealmManager = userDataRealmManager;
 
             User = new CurrentUserModel ();
         }
@@ -60,7 +63,8 @@ namespace Instagroom.Core.ViewModels {
         }
 
         private async Task ExecuteSignUpButtonClickedCommand () {
-            var response = await _userDataManager.AddUserAsync ( User );
+            //var response = await _userDataManager.AddUserAsync ( User );
+            var response = _userDataRealmManager.AddNewUser ( User );
 
             if ( response.IsSuccess ) {
                 await _navigationService.Close ( this );

@@ -9,7 +9,7 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace Instagroom.iOS.Sources
+namespace Instagroom.iOS.Views
 {
     [Register ("SignUpView")]
     partial class SignUpView

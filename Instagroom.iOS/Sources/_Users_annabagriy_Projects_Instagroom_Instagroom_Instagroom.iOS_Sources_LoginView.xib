@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view key="view" contentMode="scaleToFill" id="391">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
+            <viewLayoutGuide key="safeArea" id="425"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="392" translatesAutoresizingMaskIntoConstraints="NO" image="instagroomLogo" misplaced="YES" ambiguous="YES">
+                    <rect key="frame" x="98" y="94" width="179" height="42"/>
+                    <constraints>
+                        <constraint id="393" firstAttribute="height" constant="42"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="394" translatesAutoresizingMaskIntoConstraints="NO" spacing="58" distribution="equalSpacing" misplaced="YES" ambiguous="YES">
+                    <rect key="frame" x="83" y="186" width="209" height="532"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="395" translatesAutoresizingMaskIntoConstraints="NO" spacing="17" distribution="fillProportionally">
+                            <rect key="frame" x="0.0" y="0.0" width="209" height="532"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="396" translatesAutoresizingMaskIntoConstraints="NO" spacing="39" distribution="equalSpacing">
+                                    <rect key="frame" x="0.0" y="0.0" width="209" height="427.5"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="397" translatesAutoresizingMaskIntoConstraints="NO" spacing="17" distribution="equalSpacing">
+                                            <rect key="frame" x="0.0" y="0.0" width="209" height="131"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="398" translatesAutoresizingMaskIntoConstraints="NO" spacing="6" distribution="equalSpacing">
+                                                    <rect key="frame" x="0.0" y="0.0" width="209" height="45"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USER NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="399" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="209" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="400" customClass="UITextFieldWithBottomLine" translatesAutoresizingMaskIntoConstraints="NO" placeholder="example@gmail.com" adjustsFontForContentSizeCategory="YES">
+                                                            <rect key="frame" x="0.0" y="23" width="209" height="22"/>
+                                                            <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                                            <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                            <constraints>
+                                                                <constraint id="401" firstAttribute="height" constant="22"/>
+                                                            </constraints>
+                                                        </textField>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="402" translatesAutoresizingMaskIntoConstraints="NO" spacing="8">
+                                                    <rect key="frame" x="0.0" y="62" width="209" height="69"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="403" translatesAutoresizingMaskIntoConstraints="NO" spacing="6" distribution="equalSpacing">
+                                                            <rect key="frame" x="0.0" y="0.0" width="209" height="45"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="404" translatesAutoresizingMaskIntoConstraints="NO" adjustsFontForContentSizeCategory="YES">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="209" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="405" customClass="UITextFieldWithBottomLine" translatesAutoresizingMaskIntoConstraints="NO" placeholder="*************" adjustsFontForContentSizeCategory="YES">
+                                                                    <rect key="frame" x="0.0" y="23" width="209" height="22"/>
+                                                                    <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                                    <constraints>
+                                                                        <constraint id="406" firstAttribute="width" constant="209"/>
+                                                                        <constraint id="407" firstAttribute="height" constant="22"/>
+                                                                    </constraints>
+                                                                </textField>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="408" translatesAutoresizingMaskIntoConstraints="NO" alignment="trailing">
+                                                            <rect key="frame" x="0.0" y="53" width="209" height="16"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="409" translatesAutoresizingMaskIntoConstraints="NO">
+                                                                    <rect key="frame" x="108" y="0.0" width="101" height="16"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                    <state key="normal" title="Forgot Password?">
+                                                                        <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                                                    </state>
+                                                                    <constraints>
+                                                                        <constraint id="410" firstAttribute="height" constant="16"/>
+                                                                    </constraints>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="411" translatesAutoresizingMaskIntoConstraints="NO" spacing="16" distribution="fillEqually">
+                                            <rect key="frame" x="0.0" y="339.5" width="209" height="88"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="412" translatesAutoresizingMaskIntoConstraints="NO" customClass="UIButtonWithShadow">
+                                                    <rect key="frame" x="0.0" y="0.0" width="209" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                                    <size key="titleShadowOffset" width="0" height="0"/>
+                                                    <state key="normal" title="LOGIN">
+                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="UIButtonWithShadow20749_TouchUpInside:" destination="414" id="413" eventType="touchUpInside"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="415" customClass="UIButtonWithShadow" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="0.0" y="52" width="209" height="36"/>
+                                                    <state key="normal" title="SIGN UP">
+                                                        <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints/>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" id="416" translatesAutoresizingMaskIntoConstraints="NO" distribution="fillEqually">
+                                    <rect key="frame" x="0.0" y="444.5" width="209" height="40.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or connect with" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="417" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="209" height="40.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" id="418" translatesAutoresizingMaskIntoConstraints="NO" distribution="fillEqually" spacing="24" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="502" width="209" height="30"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="419" customClass="UIButtonWithShadow" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="92.5" height="30"/>
+                                            <color key="backgroundColor" colorSpace="calibratedRGB" red="0.14117647058823529" green="0.45490196078431372" blue="0.78431372549019607" alpha="1"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <state key="normal" title="FACEBOOK" image="facebookLogo">
+                                                <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="UIButtonWithShadow35074_TouchUpInside:" destination="421" id="420" eventType="touchUpInside"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" id="422" customClass="UIButtonWithShadow" translatesAutoresizingMaskIntoConstraints="NO" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO">
+                                            <rect key="frame" x="116.5" y="0.0" width="92.5" height="30"/>
+                                            <color key="backgroundColor" colorSpace="calibratedRGB" red="0.91764705882352937" green="0.28235294117647058" blue="0.28235294117647058" alpha="1"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <state key="normal" title="GOOGLE" image="googleLogo">
+                                                <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                            </state>
+                                            <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint id="423" firstAttribute="height" constant="30"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint id="424" firstItem="392" firstAttribute="leading" secondItem="425" secondAttribute="leading" constant="98"/>
+                <constraint id="426" firstItem="425" firstAttribute="trailing" secondItem="392" secondAttribute="trailing" constant="98"/>
+                <constraint id="427" firstItem="392" firstAttribute="top" secondItem="391" secondAttribute="top" constant="94" relation="lessThanOrEqual"/>
+                <constraint id="428" firstItem="394" firstAttribute="top" secondItem="392" secondAttribute="bottom" constant="50"/>
+                <constraint id="429" firstItem="394" firstAttribute="leading" secondItem="425" secondAttribute="leading" constant="83"/>
+                <constraint id="430" firstItem="425" firstAttribute="trailing" secondItem="394" secondAttribute="trailing" constant="83"/>
+                <constraint id="431" firstItem="425" firstAttribute="bottom" secondItem="394" secondAttribute="bottom" constant="94"/>
+                <constraint id="432" firstItem="392" firstAttribute="top" secondItem="391" secondAttribute="top" constant="60" relation="greaterThanOrEqual"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

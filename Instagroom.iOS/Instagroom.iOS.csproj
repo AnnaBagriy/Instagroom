@@ -26,6 +26,7 @@
     <CodesignKey>iPhone Developer: Maryan Savka (YKCU29NCLH)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <MtouchSdkVersion>12.1</MtouchSdkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -48,7 +49,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchArch>ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignKey>iPhone Developer: Maryan Savka (YKCU29NCLH)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
@@ -95,6 +96,10 @@
     <PackageReference Include="Xamarin.Facebook.iOS">
       <Version>4.38.0</Version>
     </PackageReference>
+    <PackageReference Include="System.Reflection.Emit">
+      <Version>4.6.0-preview3.19128.7</Version>
+      <ExcludeAssets>all</ExcludeAssets>
+    </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.5.231</Version>
     </PackageReference>
@@ -102,7 +107,7 @@
       <Version>2.5.0</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Google.iOS.SignIn">
-      <Version>4.2.0</Version>
+      <Version>4.4.0</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross.Plugin.DownloadCache">
       <Version>5.7.0</Version>
@@ -125,6 +130,15 @@
     <PackageReference Include="Cirrious.FluentLayout">
       <Version>2.9.0</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugin.Media">
+      <Version>4.1.2-beta</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.Permissions">
+      <Version>4.0.4-beta</Version>
+    </PackageReference>
+    <PackageReference Include="Realm">
+      <Version>3.4.0</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DebugTrace.cs" />
@@ -144,23 +158,15 @@
     <Compile Include="Services\FacebookLoginService.cs" />
     <Compile Include="Services\GoogleLoginService.cs" />
     <Compile Include="Converters\PostCreationDateConverter.cs" />
-    <Compile Include="Views\Cells\UIPostCell.cs" />
-    <Compile Include="Views\Cells\UIPostCell.designer.cs">
-      <DependentUpon>UIPostCell.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Cells\UIUserCell.cs" />
     <Compile Include="Views\Cells\UIUserCell.designer.cs">
       <DependentUpon>UIUserCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sources\PostCellViewSource.cs" />
+    <Compile Include="Sources\PostTableViewSource.cs" />
     <Compile Include="Sources\SearchResultsTableViewSource.cs" />
     <Compile Include="Views\MainTabView.cs" />
     <Compile Include="Views\MainTabView.designer.cs">
       <DependentUpon>MainTabView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\PostsView.cs" />
-    <Compile Include="Views\PostsView.designer.cs">
-      <DependentUpon>PostsView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\SearchView.cs" />
     <Compile Include="Views\SearchView.designer.cs">
@@ -174,20 +180,110 @@
     <Compile Include="Views\LoginView.designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\PostsView.cs" />
+    <Compile Include="Views\PostsView.designer.cs">
+      <DependentUpon>PostsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cells\UIPostCell.cs" />
+    <Compile Include="Views\Cells\UIPostCell.designer.cs">
+      <DependentUpon>UIPostCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\ImagePathToUIImageViewConverter.cs" />
+    <Compile Include="Views\PostDetailsView.cs" />
+    <Compile Include="Views\PostDetailsView.designer.cs">
+      <DependentUpon>PostDetailsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cells\UICommentCell.cs" />
+    <Compile Include="Views\Cells\UICommentCell.designer.cs">
+      <DependentUpon>UICommentCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UILabelWithImage.cs" />
+    <Compile Include="Controls\UITextFieldWithImage.cs" />
+    <Compile Include="Views\FavouritesView.cs" />
+    <Compile Include="Views\FavouritesView.designer.cs">
+      <DependentUpon>FavouritesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CameraView.cs" />
+    <Compile Include="Views\CameraView.designer.cs">
+      <DependentUpon>CameraView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Sources\CommentsTableViewSource.cs" />
+    <Compile Include="Views\EditPhotoView.cs" />
+    <Compile Include="Views\EditPhotoView.designer.cs">
+      <DependentUpon>EditPhotoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditProfileView.cs" />
+    <Compile Include="Views\EditProfileView.designer.cs">
+      <DependentUpon>EditProfileView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cells\UIFollowUserCell.cs" />
+    <Compile Include="Views\Cells\UIFollowUserCell.designer.cs">
+      <DependentUpon>UIFollowUserCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cells\UIUserLikedPhotoCell.cs" />
+    <Compile Include="Views\Cells\UIUserLikedPhotoCell.designer.cs">
+      <DependentUpon>UIUserLikedPhotoCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sources\FavouritesTableViewSource.cs" />
+    <Compile Include="Helpers\NavigationBarHelper.cs" />
+    <Compile Include="Views\CurrentUserProfileView.cs" />
+    <Compile Include="Views\CurrentUserProfileView.designer.cs">
+      <DependentUpon>CurrentUserProfileView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Subviews\UserProfileHeaderView.cs" />
+    <Compile Include="Views\Subviews\UserProfileHeaderView.designer.cs">
+      <DependentUpon>UserProfileHeaderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\GridLayout.cs" />
+    <Compile Include="Views\Subviews\UserPhotosCollectionView.cs" />
+    <Compile Include="Views\Subviews\UserPhotosCollectionView.designer.cs">
+      <DependentUpon>UserPhotosCollectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cells\UIPhotoCell.cs" />
+    <Compile Include="Views\Cells\UIPhotoCell.designer.cs">
+      <DependentUpon>UIPhotoCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sources\UserPhotosCollectionViewSource.cs" />
+    <Compile Include="Layouts\ListLayout.cs" />
+    <Compile Include="Views\Cells\UILikedPhotoCell.cs" />
+    <Compile Include="Views\Cells\UILikedPhotoCell.designer.cs">
+      <DependentUpon>UILikedPhotoCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sources\UsersLikedPhotosCollectionViewSource.cs" />
+    <Compile Include="Views\UserProfileView.cs" />
+    <Compile Include="Views\UserProfileView.designer.cs">
+      <DependentUpon>UserProfileView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\CameraService.cs" />
+    <None Include="FodyWeavers.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Setup.cs" />
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
-    <InterfaceDefinition Include="Views\Cells\UIPostCell.xib" />
     <InterfaceDefinition Include="Views\Cells\UIUserCell.xib" />
-    <InterfaceDefinition Include="Sources\Storyboard.storyboard">
-      <SubType>Designer</SubType>
-    </InterfaceDefinition>
     <InterfaceDefinition Include="Views\MainTabView.xib" />
-    <InterfaceDefinition Include="Views\PostsView.xib" />
     <InterfaceDefinition Include="Views\SearchView.xib" />
     <InterfaceDefinition Include="Views\SignUpView.xib" />
     <InterfaceDefinition Include="Views\LoginView.xib" />
+    <InterfaceDefinition Include="Views\PostsView.xib" />
+    <InterfaceDefinition Include="Views\Cells\UIPostCell.xib" />
+    <InterfaceDefinition Include="Views\Cells\UICommentCell.xib" />
+    <InterfaceDefinition Include="Views\PostDetailsView.xib" />
+    <InterfaceDefinition Include="Views\FavouritesView.xib" />
+    <InterfaceDefinition Include="Views\Storyboard.storyboard">
+      <SubType>Designer</SubType>
+    </InterfaceDefinition>
+    <InterfaceDefinition Include="Views\EditPhotoView.xib" />
+    <InterfaceDefinition Include="Views\EditProfileView.xib" />
+    <InterfaceDefinition Include="Views\Cells\UIFollowUserCell.xib" />
+    <InterfaceDefinition Include="Views\Cells\UIUserLikedPhotoCell.xib" />
+    <InterfaceDefinition Include="Views\CurrentUserProfileView.xib" />
+    <InterfaceDefinition Include="Views\Subviews\UserProfileHeaderView.xib" />
+    <InterfaceDefinition Include="Views\Cells\UIPhotoCell.xib" />
+    <InterfaceDefinition Include="Views\Subviews\UserPhotosCollectionView.xib" />
+    <InterfaceDefinition Include="Views\Cells\UILikedPhotoCell.xib" />
+    <InterfaceDefinition Include="Views\UserProfileView.xib" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -200,135 +296,347 @@
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20_1x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20_2x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20_3x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29_1x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29_2x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29_3x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40_1x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40_2x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40_3x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-57x57_1x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-57x57_2x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60_1x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60_2x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60_3x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-72x72_1x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-72x72_2x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76_1x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76_2x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76_3x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-50x50_1x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-50x50_2x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-83.5x83.5_2x.png">
-      <InProject>false</InProject>
+      <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\loginBackground.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\loginBackground.imageset\rectangle3.png" />
-    <ImageAsset Include="Assets.xcassets\loginBackground.imageset\rectangle3%402x.png" />
-    <ImageAsset Include="Assets.xcassets\loginBackground.imageset\rectangle3%403x.png" />
-    <ImageAsset Include="Assets.xcassets\DeepTurquoise.colorset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Teal.colorset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\facebookLogo.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\googleLogo.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\facebookLogo.imageset\facebookLogo.png" />
-    <ImageAsset Include="Assets.xcassets\facebookLogo.imageset\facebookLogo%402x.png" />
-    <ImageAsset Include="Assets.xcassets\facebookLogo.imageset\facebookLogo%403x.png" />
-    <ImageAsset Include="Assets.xcassets\googleLogo.imageset\googlePlusSymbol.png" />
-    <ImageAsset Include="Assets.xcassets\googleLogo.imageset\googlePlusSymbol%402x.png" />
-    <ImageAsset Include="Assets.xcassets\googleLogo.imageset\googlePlusSymbol%403x.png" />
-    <ImageAsset Include="Assets.xcassets\googleLogo.imageset\googlePlusSymbol.pdf" />
-    <ImageAsset Include="Assets.xcassets\facebookLogo.imageset\facebookLogo.pdf" />
-    <ImageAsset Include="Assets.xcassets\signUpBackground.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\signUpBackground.imageset\rectangle3.png" />
-    <ImageAsset Include="Assets.xcassets\signUpBackground.imageset\rectangle3%402x.png" />
-    <ImageAsset Include="Assets.xcassets\signUpBackground.imageset\rectangle3%403x.png" />
-    <ImageAsset Include="Assets.xcassets\icHome.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\icHome.imageset\home.png" />
-    <ImageAsset Include="Assets.xcassets\icHome.imageset\home%402x.png" />
-    <ImageAsset Include="Assets.xcassets\icHome.imageset\home%403x.png" />
-    <ImageAsset Include="Assets.xcassets\icSearch.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\icCamera.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\icFavourites.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\icProfile.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\icCamera.imageset\cameraAlt.png" />
-    <ImageAsset Include="Assets.xcassets\icCamera.imageset\cameraAlt%402x.png" />
-    <ImageAsset Include="Assets.xcassets\icCamera.imageset\cameraAlt%403x.png" />
-    <ImageAsset Include="Assets.xcassets\icFavourites.imageset\favorite.png" />
-    <ImageAsset Include="Assets.xcassets\icFavourites.imageset\favorite%402x.png" />
-    <ImageAsset Include="Assets.xcassets\icFavourites.imageset\favorite%403x.png" />
-    <ImageAsset Include="Assets.xcassets\icProfile.imageset\person.png" />
-    <ImageAsset Include="Assets.xcassets\icProfile.imageset\person%402x.png" />
-    <ImageAsset Include="Assets.xcassets\icProfile.imageset\person%403x.png" />
-    <ImageAsset Include="Assets.xcassets\instagroomLogo.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\instagroomLogo.imageset\instagroom.png" />
-    <ImageAsset Include="Assets.xcassets\instagroomLogo.imageset\instagroom%402x.png" />
-    <ImageAsset Include="Assets.xcassets\instagroomLogo.imageset\instagroom%403x.png" />
-    <ImageAsset Include="Assets.xcassets\icCamera.imageset\cameraAlt.pdf" />
-    <ImageAsset Include="Assets.xcassets\icFavourites.imageset\favorite.pdf" />
-    <ImageAsset Include="Assets.xcassets\icHome.imageset\home.pdf" />
-    <ImageAsset Include="Assets.xcassets\icProfile.imageset\person %281%29.pdf" />
-    <ImageAsset Include="Assets.xcassets\icSearch.imageset\search.pdf" />
-    <ImageAsset Include="Assets.xcassets\icSearch.imageset\search.png" />
-    <ImageAsset Include="Assets.xcassets\icSearch.imageset\search%402x.png" />
-    <ImageAsset Include="Assets.xcassets\icSearch.imageset\search%403x.png" />
-    <ImageAsset Include="Assets.xcassets\icBookmark.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\icHeart.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\icBookmark.imageset\bookmarkBorder.pdf" />
-    <ImageAsset Include="Assets.xcassets\icBookmark.imageset\bookmarkBorder.png" />
-    <ImageAsset Include="Assets.xcassets\icBookmark.imageset\bookmarkBorder%402x.png" />
-    <ImageAsset Include="Assets.xcassets\icBookmark.imageset\bookmarkBorder%403x.png" />
-    <ImageAsset Include="Assets.xcassets\icHeart.imageset\heart.pdf" />
-    <ImageAsset Include="Assets.xcassets\icHeart.imageset\heart.png" />
-    <ImageAsset Include="Assets.xcassets\icHeart.imageset\heart%402x.png" />
-    <ImageAsset Include="Assets.xcassets\icHeart.imageset\heart%403x.png" />
-    <ImageAsset Include="Assets.xcassets\icUser.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\icUser.imageset\default-user-avatar-thumbnail%402x-ad6390912469759cda3106088905fa5bfbadc41532fbaa28237209b1aa976fc9.png" />
+    <ImageAsset Include="Assets.xcassets\loginBackground.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\loginBackground.imageset\rectangle3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\loginBackground.imageset\rectangle3%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\loginBackground.imageset\rectangle3%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\DeepTurquoise.colorset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Teal.colorset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\facebookLogo.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\googleLogo.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\facebookLogo.imageset\facebookLogo.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\facebookLogo.imageset\facebookLogo%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\facebookLogo.imageset\facebookLogo%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\googleLogo.imageset\googlePlusSymbol.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\googleLogo.imageset\googlePlusSymbol%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\googleLogo.imageset\googlePlusSymbol%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\googleLogo.imageset\googlePlusSymbol.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\facebookLogo.imageset\facebookLogo.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\signUpBackground.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\signUpBackground.imageset\rectangle3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\signUpBackground.imageset\rectangle3%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\signUpBackground.imageset\rectangle3%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icHome.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icHome.imageset\home.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icHome.imageset\home%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icHome.imageset\home%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icSearch.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icCamera.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icFavourites.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icProfile.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icCamera.imageset\cameraAlt.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icCamera.imageset\cameraAlt%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icCamera.imageset\cameraAlt%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icFavourites.imageset\favorite.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icFavourites.imageset\favorite%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icFavourites.imageset\favorite%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icProfile.imageset\person.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icProfile.imageset\person%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icProfile.imageset\person%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\instagroomLogo.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\instagroomLogo.imageset\instagroom.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\instagroomLogo.imageset\instagroom%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\instagroomLogo.imageset\instagroom%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icCamera.imageset\cameraAlt.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icFavourites.imageset\favorite.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icHome.imageset\home.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icProfile.imageset\person %281%29.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icSearch.imageset\search.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icSearch.imageset\search.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icSearch.imageset\search%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icSearch.imageset\search%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icBookmark.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icHeart.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icBookmark.imageset\bookmarkBorder.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icBookmark.imageset\bookmarkBorder.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icBookmark.imageset\bookmarkBorder%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icBookmark.imageset\bookmarkBorder%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icHeart.imageset\heart.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icHeart.imageset\heart.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icHeart.imageset\heart%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icHeart.imageset\heart%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icUser.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icUser.imageset\default-user-avatar-thumbnail%402x-ad6390912469759cda3106088905fa5bfbadc41532fbaa28237209b1aa976fc9.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\defaultPostImage.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\defaultPostImage.imageset\pexels-photo-414171.jpeg">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icChatBubble.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icChatBubble.imageset\chatBubbleOutline.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icChatBubble.imageset\chatBubbleOutline%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icChatBubble.imageset\chatBubbleOutline%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icSend.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icSend.imageset\send.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icSend.imageset\send%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icSend.imageset\send%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\backArrow.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\backArrow.imageset\icArrowBackIos24Px.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\backArrow.imageset\icArrowBackIos24Px%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\backArrow.imageset\icArrowBackIos24Px%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icHeartSelected.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icBookmarkSelected.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icHeartSelected.imageset\favorite.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icHeartSelected.imageset\favorite%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icHeartSelected.imageset\favorite%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icBookmarkSelected.imageset\bookmark.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icBookmarkSelected.imageset\bookmark%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icBookmarkSelected.imageset\bookmark%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icInsertPhoto.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icInsertPhoto.imageset\insertPhoto.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icInsertPhoto.imageset\insertPhoto%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icInsertPhoto.imageset\insertPhoto%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icFavourite.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icFavourite.imageset\favorite.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icFavourite.imageset\favorite%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\icFavourite.imageset\favorite%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Instagroom.Core\Instagroom.Core.csproj">
@@ -360,12 +668,24 @@
     <Folder Include="Converters\" />
     <Folder Include="Views\Cells\" />
     <Folder Include="Sources\" />
+    <Folder Include="Assets.xcassets\defaultPostImage.imageset\" />
+    <Folder Include="Assets.xcassets\icChatBubble.imageset\" />
+    <Folder Include="Assets.xcassets\icSend.imageset\" />
+    <Folder Include="Assets.xcassets\backArrow.imageset\" />
+    <Folder Include="Assets.xcassets\icHeartSelected.imageset\" />
+    <Folder Include="Assets.xcassets\icBookmarkSelected.imageset\" />
+    <Folder Include="Assets.xcassets\icInsertPhoto.imageset\" />
+    <Folder Include="Assets.xcassets\icFavourite.imageset\" />
+    <Folder Include="Views\Subviews\" />
+    <Folder Include="Layouts\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Roboto-Regular.ttf" />
     <BundleResource Include="GoogleService-Info.plist" />
-    <BundleResource Include="Resources\GoogleService-Info.plist" />
     <BundleResource Include="Resources\Roboto-Medium.ttf" />
+    <BundleResource Include="Resources\GoogleService-Info.plist" />
+    <BundleResource Include="Resources\Roboto-Bold.ttf" />
+    <BundleResource Include="Resources\Roboto-Light.ttf" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

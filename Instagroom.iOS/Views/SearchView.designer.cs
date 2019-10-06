@@ -9,17 +9,26 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace Instagroom.iOS.Sources
+namespace Instagroom.iOS.Views
 {
     [Register ("SearchView")]
     partial class SearchView
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UISearchBar searchBar { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITableView searchResultsTableView { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (searchBar != null) {
+                searchBar.Dispose ();
+                searchBar = null;
+            }
+
             if (searchResultsTableView != null) {
                 searchResultsTableView.Dispose ();
                 searchResultsTableView = null;

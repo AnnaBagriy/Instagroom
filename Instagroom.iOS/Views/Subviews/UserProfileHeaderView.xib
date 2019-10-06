@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserProfileHeaderView">
+            <connections>
+                <outlet property="editProfileButton" destination="3931" id="name-outlet-3931"/>
+                <outlet property="followersAmountLabel" destination="7437" id="name-outlet-7437"/>
+                <outlet property="followersLabel" destination="10394" id="name-outlet-10394"/>
+                <outlet property="followingAmountLabel" destination="8244" id="name-outlet-8244"/>
+                <outlet property="followingLabel" destination="10663" id="name-outlet-10663"/>
+                <outlet property="postsAmountLabel" destination="4477" id="name-outlet-4477"/>
+                <outlet property="postsLabel" destination="9319" id="name-outlet-9319"/>
+                <outlet property="userPhoto" destination="3120" id="name-outlet-3120"/>
+                <outlet property="usernameLabel" destination="3257" id="name-outlet-3257"/>
+                <outlet property="rootView" destination="2" id="name-outlet-2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2" autoresizesSubviews="NO">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3120">
+                    <rect key="frame" x="17" y="17" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="3121"/>
+                        <constraint firstAttribute="height" constant="70" id="3122"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3257">
+                    <rect key="frame" x="111" y="28" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3931">
+                    <rect key="frame" x="16" y="97" width="70" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="3932"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4477">
+                    <rect key="frame" x="111" y="72.5" width="40" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="4478"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7437">
+                    <rect key="frame" x="111" y="94" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8244">
+                    <rect key="frame" x="111" y="115.5" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9319">
+                    <rect key="frame" x="153" y="72.5" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10394">
+                    <rect key="frame" x="153" y="94" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10663">
+                    <rect key="frame" x="153" y="115.5" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="4477" firstAttribute="leading" secondItem="3257" secondAttribute="leading" id="4748"/>
+                <constraint firstItem="3120" firstAttribute="top" secondItem="2" secondAttribute="top" constant="17" id="5152"/>
+                <constraint firstItem="3120" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="17" id="5421"/>
+                <constraint firstItem="3931" firstAttribute="top" secondItem="3120" secondAttribute="bottom" constant="10" id="5690"/>
+                <constraint firstItem="3257" firstAttribute="leading" secondItem="3120" secondAttribute="trailing" constant="24" id="5959"/>
+                <constraint firstItem="3120" firstAttribute="leading" secondItem="3931" secondAttribute="leading" constant="1" id="6362"/>
+                <constraint firstItem="3257" firstAttribute="top" secondItem="2" secondAttribute="top" constant="28" id="6765"/>
+                <constraint firstItem="4477" firstAttribute="top" secondItem="3257" secondAttribute="bottom" constant="24" id="7034"/>
+                <constraint firstItem="7437" firstAttribute="top" secondItem="4477" secondAttribute="bottom" constant="1" id="7706"/>
+                <constraint firstItem="4477" firstAttribute="leading" secondItem="7437" secondAttribute="leading" id="7975"/>
+                <constraint firstItem="8244" firstAttribute="top" secondItem="7437" secondAttribute="bottom" constant="1" id="8513"/>
+                <constraint firstItem="8244" firstAttribute="leading" secondItem="7437" secondAttribute="leading" id="8782"/>
+                <constraint firstItem="9319" firstAttribute="leading" secondItem="4477" secondAttribute="trailing" constant="2" id="9991"/>
+                <constraint firstItem="10394" firstAttribute="leading" secondItem="9319" secondAttribute="leading" id="11067"/>
+                <constraint firstItem="10663" firstAttribute="leading" secondItem="10394" secondAttribute="leading" id="11337"/>
+                <constraint firstItem="8244" firstAttribute="bottom" secondItem="10663" secondAttribute="bottom" id="13080"/>
+                <constraint firstItem="7437" firstAttribute="bottom" secondItem="10394" secondAttribute="bottom" id="13483"/>
+                <constraint firstItem="4477" firstAttribute="bottom" secondItem="9319" secondAttribute="bottom" id="13886"/>
+            </constraints>
+            <point key="canvasLocation" x="380" y="253"/>
+        </view>
+    </objects>
+</document>

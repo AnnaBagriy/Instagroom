@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Instagroom.Core.Contracts.Mappers;
+using Instagroom.Core.Helpers;
 using Instagroom.Core.Models;
 using Instagroom.Core.Models.Data;
 
@@ -8,19 +9,25 @@ namespace Instagroom.Core.Mappers {
     public class DatabaseMapper : IDatabaseMapper {
         #region To Database Models
 
-        public User ToUserFrom ( UserModel from ) {
-            var user = new User ();
+        public UserTable ToUserFrom ( UserModel from ) {
+            var user = new UserTable ();
 
             user.Email = from.Email;
             user.FirstName = from.FirstName;
             user.LastName = from.LastName;
             user.UserName = user.FirstName + " " + user.LastName;
 
+            //from.Followers.ForEach ( x => user.Followers?.Add ( ToFollowerModel ( x ) ) );
+            //from.Following.ForEach ( x => user.Followers?.Add ( ToFollowerModel ( x ) ) );
+            from.Posts.ForEach ( x => user.Posts?.Add ( ToPostFrom ( x ) ) );
+            //from.LikedPosts.ForEach ( x => user.LikedPosts?.Add ( ToPostFrom ( x ) ) );
+            //from.SavedPosts.ForEach ( x => user.SavedPosts?.Add ( ToPostFrom ( x ) ) );
+
             return user;
         }
 
-        public User ToUserFrom ( CurrentUserModel from ) {
-            var user = new User ();
+        public UserTable ToUserFrom ( CurrentUserModel from ) {
+            var user = new UserTable ();
 
             user.Email = from.Email;
             user.FirstName = from.FirstName;
@@ -31,18 +38,16 @@ namespace Instagroom.Core.Mappers {
             return user;
         }
 
-        public Post ToPostFrom ( PostModel from ) {
-            var post = new Post ();
+        public PostTable ToPostFrom ( PostModel from ) {
+            var post = new PostTable ();
 
             post.Desription = from.Desription;
             post.Id = from.Id;
             post.DateCreated = from.DateCreated;
             post.Image = from.Image;
-            if ( from.Comments == null )
-                from.Comments = new List<CommentModel> ();
-            foreach ( var comment in from.Comments ) {
-                post.Comments.Add ( ToCommentFrom ( comment ) );
-            }
+
+            from.Comments.ForEach ( x => post.Comments?.Add ( ToCommentFrom ( x ) ) );
+
             if ( from.Likes == null )
                 from.Likes = new List<LikeModel> ();
             foreach ( var like in from.Likes ) {
@@ -52,8 +57,32 @@ namespace Instagroom.Core.Mappers {
             return post;
         }
 
-        public IEnumerable<Post> ToPostFrom ( IEnumerable<PostModel> from ) {
-            List<Post> posts = null;
+        public CommentTable ToCommentFrom ( CommentModel from ) {
+            var comment = new CommentTable ();
+
+            comment.Id = from.Id;
+            comment.Content = from.Content;
+            comment.DateCreated = from.DateCreated;
+            comment.AuthorId = from.Author.Id;
+            comment.Author = ToUserFrom ( from.Author );
+            comment.PostId = from.Post.Id;
+            comment.Post = ToPostFrom ( from.Post );
+
+            return comment;
+        }
+
+        public LikeTable ToLikeFrom ( LikeModel from ) {
+            var like = new LikeTable ();
+
+            //like.AuthorId = from.Author.Id;
+            like.Id = from.Id;
+            //like.UserId = from.User.Id;
+
+            return like;
+        }
+
+        public IEnumerable<PostTable> ToPostFrom ( IEnumerable<PostModel> from ) {
+            List<PostTable> posts = null;
 
             if ( from != null ) {
                 foreach ( var post in from ) {
@@ -64,33 +93,21 @@ namespace Instagroom.Core.Mappers {
             return posts;
         }
 
-        public Comment ToCommentFrom ( CommentModel from ) {
-            var comment = new Comment ();
-
-            comment.Id = from.Id;
-            comment.Content = from.Content;
-            comment.AuthorId = from.AuthorId;
-            comment.UserId = from.UserId;
-
-            return comment;
-        }
-
-        public Like ToLikeFrom ( LikeModel from ) {
-            var like = new Like ();
-
-            like.AuthorId = from.AuthorId;
-            like.Id = from.Id;
-            like.UserId = from.UserId;
-
-            return like;
-        }
-
         #endregion
 
         #region To UI Models
 
-        public CurrentUserModel ToCurrentUserModelFrom ( User from ) {
+        public CurrentUserModel ToCurrentUserModelFrom ( UserTable from ) {
             var user = new CurrentUserModel ();
+
+            user.Password = from.Password;
+
+            user.Followers = new List<UserModel> ();
+            user.Following = new List<UserModel> ();
+            user.LikedPosts = new List<LikedPhotoModel> ();
+            user.SavedPosts = new List<SavedPhotoModel> ();
+            user.Posts = new List<PostModel> ();
+            user.FollowingPosts = new List<PostModel> ();
 
             user.Id = from.Id;
             user.Email = from.Email;
@@ -98,67 +115,127 @@ namespace Instagroom.Core.Mappers {
             user.LastName = from.LastName;
             user.UserName = user.UserName ?? user.FirstName + " " + user.LastName;
             user.Password = from.Password;
-            if ( from.Followers == null )
-                from.Followers = new List<User> ();
-            foreach ( var follower in from.Followers ) {
-                user.Followers.Add ( ToCurrentUserModelFrom ( follower ) );
-            }
-            if ( from.Following == null )
-                from.Following = new List<User> ();
-            foreach ( var following in from.Following ) {
-                user.Following.Add ( ToCurrentUserModelFrom ( following ) );
-            }
+            user.Avatar = from.Avatar;
+            user.Bio = from.Bio;
 
-            if ( from.Posts == null )
-                from.Posts = new List<Post> ();
-            foreach ( var post in from.Posts ) {
-                user.Posts.Add ( ToPostModelFrom ( post ) );
-            }
-            if ( from.LikedPosts == null )
-                from.LikedPosts = new List<Post> ();
-            foreach ( var likedPost in from.LikedPosts ) {
-                user.LikedPosts.Add ( ToPostModelFrom ( likedPost ) );
-            }
+            from.Followers?.ForEach ( x => user.Followers?.Add ( ToFollowerModel ( x ) ) );
+            from.Following?.ForEach ( x => user.Followers?.Add ( ToFollowerModel ( x ) ) );
+            from.Posts?.ForEach ( x => user.Posts?.Add ( ToPostModelFrom ( x ) ) );
+            from.LikedPosts?.ForEach ( x => user.LikedPosts?.Add ( ToPostModelFrom ( x ) ) );
+            from.SavedPosts?.ForEach ( x => user.SavedPosts?.Add ( ToPostModelFrom ( x ) ) );
+
+            user.Following?.ForEach ( u => user.FollowingPosts.AddRange ( u.Posts ) );
+            user.FollowingPosts?.OrderByDescending ( post => post.DateCreated );
 
             return user;
         }
 
-        public UserModel ToUserModelFrom ( User from ) {
+        private UserModel ToFollowerModel ( UserTable from ) {
             var user = new UserModel ();
 
             user.Id = from.Id;
             user.Email = from.Email;
             user.FirstName = from.FirstName;
             user.LastName = from.LastName;
-            user.UserName = from.UserName ?? user.FirstName + " " + user.LastName;
-            if ( from.Followers == null )
-                from.Followers = new List<User> ();
-            foreach ( var follower in from.Followers ) {
-                user.Followers.Add ( ToUserModelFrom ( follower ) );
-            }
-
-            if ( from.Following == null )
-                from.Following = new List<User> ();
-            foreach ( var following in from.Following ) {
-                user.Following.Add ( ToUserModelFrom ( following ) );
-            }
-
-            if ( from.Posts == null )
-                from.Posts = new List<Post> ();
-            foreach ( var post in from.Posts ) {
-                user.Posts.Add ( ToPostModelFrom ( post ) );
-            }
-
-            if ( from.LikedPosts == null )
-                from.LikedPosts = new List<Post> ();
-            foreach ( var likedPost in from.LikedPosts ) {
-                user.LikedPosts.Add ( ToPostModelFrom ( likedPost ) );
-            }
+            user.UserName = user.UserName ?? user.FirstName + " " + user.LastName;
 
             return user;
         }
 
-        public IEnumerable<UserModel> ToUserModelFrom ( IEnumerable<User> from ) {
+        public UserModel ToUserModelFrom ( UserTable from ) {
+            var user = new UserModel ();
+
+            user.Following = new List<UserModel> ();
+            user.Followers = new List<UserModel> ();
+            user.Posts = new List<PostModel> ();
+            user.LikedPosts = new List<LikedPhotoModel> ();
+            user.SavedPosts = new List<SavedPhotoModel> ();
+
+            user.Id = from.Id;
+            user.Email = from.Email;
+            user.FirstName = from.FirstName;
+            user.LastName = from.LastName;
+            user.UserName = from.UserName ?? user.FirstName + " " + user.LastName;
+            user.Avatar = from.Avatar;
+            user.Bio = from.Bio;
+
+            from.Followers?.ForEach ( x => user.Followers?.Add ( ToFollowerModel ( x ) ) );
+            from.Following?.ForEach ( x => user.Followers?.Add ( ToFollowerModel ( x ) ) );
+            from.Posts?.ForEach ( x => user.Posts?.Add ( ToPostModelFrom ( x ) ) );
+            from.LikedPosts?.ForEach ( x => user.LikedPosts?.Add ( ToPostModelFrom ( x ) ) );
+            from.SavedPosts?.ForEach ( x => user.SavedPosts?.Add ( ToPostModelFrom ( x ) ) );
+
+            return user;
+        }
+
+        public PostModel ToPostModelFrom ( PostTable from ) {
+            var post = new PostModel ();
+
+            post.Comments = new List<CommentModel> ();
+            post.Likes = new List<LikeModel> ();
+
+            post.IsLiked = CurrentUser.User?.LikedPosts?.FirstOrDefault ( x => x?.Post?.Id == post.Id ) != null;
+            post.IsSaved = CurrentUser.User?.SavedPosts?.FirstOrDefault ( x => x?.Post?.Id == post.Id ) != null;
+
+            post.Desription = from.Desription;
+            post.Id = from.Id;
+            post.DateCreated = from.DateCreated;
+            post.Image = from.Image;
+
+            from.Comments?.ForEach ( x => post.Comments?.Add ( ToCommentModelFrom ( x ) ) );
+            from.Comments?.ForEach ( x => post.Comments?.Add ( ToCommentModelFrom ( x ) ) );
+            from.Likes?.ForEach ( x => post.Likes?.Add ( ToLikeModelFrom ( x ) ) );
+
+            post.Comments?.OrderBy ( comment => comment.DateCreated );
+
+            return post;
+        }
+
+        public LikedPhotoModel ToPostModelFrom ( LikedPostTable from ) {
+            var post = new LikedPhotoModel ();
+
+            post.When = from.WhenPostWasLiked;
+            //post.Post = ToPostModelFrom ( from.Post );
+            //post.User = ToUserModelFrom ( from.User );
+
+            return post;
+        }
+
+        public SavedPhotoModel ToPostModelFrom ( SavedPostTable from ) {
+            var post = new SavedPhotoModel ();
+
+            post.WhenSaved = from.WhenPostWasSaved;
+            //post.Post = ToPostModelFrom ( from.Post );
+            //post.User = ToUserModelFrom ( from.User );
+
+            return post;
+        }
+
+        public CommentModel ToCommentModelFrom ( CommentTable from ) {
+            var comment = new CommentModel ();
+
+            comment.Id = from.Id;
+            comment.Content = from.Content;
+            comment.DateCreated = from.DateCreated;
+            //comment.Post = ToPostModelFrom( from.Post);
+            //comment.Author = ToUserModelFrom ( from.Author );
+
+            return comment;
+        }
+
+        public LikeModel ToLikeModelFrom ( LikeTable from ) {
+            var like = new LikeModel ();
+
+            like.Id = from.Id;
+            //like.Author = ToUserModelFrom( from.Author);
+            //like.Post = ToPostModelFrom ( from.Post );
+
+            return like;
+        }
+
+        #region Collections
+
+        public IEnumerable<UserModel> ToUserModelFrom ( IEnumerable<UserTable> from ) {
             List<UserModel> users = new List<UserModel> ();
 
             if ( from != null ) {
@@ -170,50 +247,8 @@ namespace Instagroom.Core.Mappers {
             return users;
         }
 
-        public PostModel ToPostModelFrom ( Post from ) {
-            var post = new PostModel ();
-
-            post.Desription = from.Desription;
-            post.Id = from.Id;
-            post.DateCreated = from.DateCreated;
-            post.Image = from.Image;
-            if ( from.Comments == null )
-                from.Comments = new List<Comment> ();
-            foreach ( var comment in from.Comments ) {
-                post.Comments.Add ( ToCommentModelFrom ( comment ) );
-            }
-            if ( from.Likes == null )
-                from.Likes = new List<Like> ();
-            foreach ( var like in from.Likes ) {
-                post.Likes.Add ( ToLikeModelFrom ( like ) );
-            }
-
-            return post;
-        }
-
-        public CommentModel ToCommentModelFrom ( Comment from ) {
-            var comment = new CommentModel ();
-
-            comment.Id = from.Id;
-            comment.Content = from.Content;
-            comment.AuthorId = from.AuthorId;
-            comment.UserId = from.UserId;
-
-            return comment;
-        }
-
-        public LikeModel ToLikeModelFrom ( Like from ) {
-            var like = new LikeModel ();
-
-            like.AuthorId = from.AuthorId;
-            like.Id = from.Id;
-            like.UserId = from.UserId;
-
-            return like;
-        }
-
-        public IEnumerable<PostModel> ToPostModelFrom ( IEnumerable<Post> from ) {
-            List<PostModel> posts = new List<PostModel>();
+        public IEnumerable<PostModel> ToPostModelFrom ( IEnumerable<PostTable> from ) {
+            List<PostModel> posts = new List<PostModel> ();
 
             foreach ( var post in from ) {
                 posts.Add ( ToPostModelFrom ( post ) );
@@ -221,6 +256,8 @@ namespace Instagroom.Core.Mappers {
 
             return posts;
         }
+
+        #endregion
 
         #endregion
     }

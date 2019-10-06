@@ -220,5 +220,95 @@ namespace Instagroom.Core.Resources {
                 return ResourceManager.GetString("NoSuchUserExists", resourceCulture);
             }
         }
+        
+        public static string Post_Comments {
+            get {
+                return ResourceManager.GetString("Post_Comments", resourceCulture);
+            }
+        }
+        
+        public static string AddComment_Placeholder {
+            get {
+                return ResourceManager.GetString("AddComment_Placeholder", resourceCulture);
+            }
+        }
+        
+        public static string Search_SearchPlaceholder {
+            get {
+                return ResourceManager.GetString("Search_SearchPlaceholder", resourceCulture);
+            }
+        }
+        
+        public static string Post_Liked {
+            get {
+                return ResourceManager.GetString("Post_Liked", resourceCulture);
+            }
+        }
+        
+        public static string Post_Commented {
+            get {
+                return ResourceManager.GetString("Post_Commented", resourceCulture);
+            }
+        }
+        
+        public static string User_NewFollower {
+            get {
+                return ResourceManager.GetString("User_NewFollower", resourceCulture);
+            }
+        }
+        
+        public static string User_Follow {
+            get {
+                return ResourceManager.GetString("User_Follow", resourceCulture);
+            }
+        }
+        
+        public static string User_Following {
+            get {
+                return ResourceManager.GetString("User_Following", resourceCulture);
+            }
+        }
+        
+        public static string Profile_EditProfile {
+            get {
+                return ResourceManager.GetString("Profile_EditProfile", resourceCulture);
+            }
+        }
+        
+        public static string Profile_Posts {
+            get {
+                return ResourceManager.GetString("Profile_Posts", resourceCulture);
+            }
+        }
+        
+        public static string Profile_Followers {
+            get {
+                return ResourceManager.GetString("Profile_Followers", resourceCulture);
+            }
+        }
+        
+        public static string Profile_Following {
+            get {
+                return ResourceManager.GetString("Profile_Following", resourceCulture);
+            }
+        }
+        
+        public static string NoLikedPosts {
+            get {
+                return ResourceManager.GetString("NoLikedPosts", resourceCulture);
+            }
+        }
+        
+        public static string NoPersonalPosts {
+            get {
+                return ResourceManager.GetString("NoPersonalPosts", resourceCulture);
+            }
+        }
+        
+        public static string NoFollowing {
+            get {
+                return ResourceManager.GetString("NoFollowing", resourceCulture);
+            }
+        }
     }
 }

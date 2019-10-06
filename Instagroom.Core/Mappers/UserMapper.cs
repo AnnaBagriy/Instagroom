@@ -28,5 +28,18 @@ namespace Instagroom.Core.Mappers {
 
             return user;
         }
+
+        public CurrentUserModel ToCurrentUserModelFrom ( UserModel from ) {
+            var user = new CurrentUserModel ();
+
+            user.FirstName = from.FirstName;
+            user.LastName = from.LastName;
+            user.UserName = from.UserName;
+            user.Id = from.Id;
+            user.Avatar = from.Avatar;
+            user.Email = from.Email;
+
+            return user;
+        }
     }
 }

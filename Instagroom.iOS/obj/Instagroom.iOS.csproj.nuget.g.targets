@@ -4,7 +4,11 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)xamarin.build.download/0.4.11/build/Xamarin.Build.Download.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.build.download/0.4.11/build/Xamarin.Build.Download.targets')" />
-    <Import Project="$(NuGetPackageRoot)xamarin.google.ios.signin/4.2.0/build/Xamarin.Google.iOS.SignIn.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.google.ios.signin/4.2.0/build/Xamarin.Google.iOS.SignIn.targets')" />
+    <Import Project="$(NuGetPackageRoot)xamarin.build.download\0.4.11\build\Xamarin.Build.Download.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.build.download\0.4.11\build\Xamarin.Build.Download.targets')" />
+    <Import Project="$(NuGetPackageRoot)xamarin.google.ios.signin\4.4.0\build\Xamarin.Google.iOS.SignIn.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.google.ios.signin\4.4.0\build\Xamarin.Google.iOS.SignIn.targets')" />
+    <Import Project="$(NuGetPackageRoot)netstandard.library\2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('$(NuGetPackageRoot)netstandard.library\2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />
+    <Import Project="$(NuGetPackageRoot)fody\3.0.3\build\Fody.targets" Condition="Exists('$(NuGetPackageRoot)fody\3.0.3\build\Fody.targets')" />
+    <Import Project="$(NuGetPackageRoot)realm.database\3.4.0\build\Realm.Database.targets" Condition="Exists('$(NuGetPackageRoot)realm.database\3.4.0\build\Realm.Database.targets')" />
+    <Import Project="$(NuGetPackageRoot)realm\3.4.0\build\Realm.targets" Condition="Exists('$(NuGetPackageRoot)realm\3.4.0\build\Realm.targets')" />
   </ImportGroup>
 </Project>

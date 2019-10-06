@@ -9,13 +9,30 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace Instagroom.iOS.Sources
+namespace Instagroom.iOS.Views
 {
     [Register ("PostsView")]
     partial class PostsView
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel noDataLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITableView postsTable { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (noDataLabel != null) {
+                noDataLabel.Dispose ();
+                noDataLabel = null;
+            }
+
+            if (postsTable != null) {
+                postsTable.Dispose ();
+                postsTable = null;
+            }
         }
     }
 }

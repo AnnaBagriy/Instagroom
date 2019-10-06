@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v1.4/",
-    "signature": "802cacc285ce47b5549b32e60f3d47e5445a3a26"
+    "signature": "30e6073c0f462923a7ff84d2f09d5274e2d13004"
   },
   "compilationOptions": {},
   "targets": {
@@ -16,7 +16,7 @@
           "Newtonsoft.Json": "12.0.1",
           "SQLiteNetExtensions": "2.1.0",
           "SQLiteNetExtensions.Async": "2.1.0",
-          "Xamarin.Auth": "1.6.0.4",
+          "Xam.Plugin.Media": "4.1.2-beta",
           "sameerIOTApps.Plugin.SecureStorage": "2.5.0",
           "sqlite-net-pcl": "1.5.231"
         },
@@ -181,6 +181,17 @@
           "lib/netstandard1.3/Newtonsoft.Json.dll": {
             "assemblyVersion": "12.0.0.0",
             "fileVersion": "12.0.1.22727"
+          }
+        }
+      },
+      "Plugin.Permissions/4.0.4-beta": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Plugin.Permissions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -946,11 +957,15 @@
           }
         }
       },
-      "Xamarin.Auth/1.6.0.4": {
+      "Xam.Plugin.Media/4.1.2-beta": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Plugin.Permissions": "4.0.4-beta"
+        },
         "runtime": {
-          "lib/netstandard1.0/Xamarin.Auth.dll": {
-            "assemblyVersion": "1.6.0.1",
-            "fileVersion": "1.6.0.1"
+          "lib/netstandard1.0/Plugin.Media.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       }
@@ -1038,6 +1053,13 @@
       "sha512": "sha512-jmVyoEyk0In8r+AObYQyFKVFm7uSRzE0XSHSbEtBJcZDMV6DqJoyB4FLcHwprPVhAh826so0db3DIKXVnpGoPA==",
       "path": "newtonsoft.json/12.0.1",
       "hashPath": "newtonsoft.json.12.0.1.nupkg.sha512"
+    },
+    "Plugin.Permissions/4.0.4-beta": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dgXSRgR2l5XuebzgdknYhgy3PatKGKhbtm4z53eM1TYuC2TYHmPhjJJ6C0MMWjajEELv5scdl+IKJWGvtPVNlQ==",
+      "path": "plugin.permissions/4.0.4-beta",
+      "hashPath": "plugin.permissions.4.0.4-beta.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
@@ -1399,7 +1421,7 @@
     "System.Reflection.TypeExtensions/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7u6ulLcZbyxB5Gq0nMkQttcdBTx57ibzw+4IOXEfR+sXYQoHvjW5LTLyNr8O22UIMrqYbchJQJnos4eooYzYJA==",
+      "sha512": "sha512-aK6BpjW5ryrun8j8j+faA1bvTaTrMvgaift1YTuWcU6PGh9MEr0NM177sDQIzHp0QxSDfxNWTV+yYsonIFVnfw==",
       "path": "system.reflection.typeextensions/4.3.0",
       "hashPath": "system.reflection.typeextensions.4.3.0.nupkg.sha512"
     },
@@ -1564,12 +1586,12 @@
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
     },
-    "Xamarin.Auth/1.6.0.4": {
+    "Xam.Plugin.Media/4.1.2-beta": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Z29LQBGqx9+QOJNU9ZHjuQt4L4S4z0k51IzKI9J3UGsNOd1w7/SqBBHvkGs799ImcR0B4ft8HpzwBpvwHggmUA==",
-      "path": "xamarin.auth/1.6.0.4",
-      "hashPath": "xamarin.auth.1.6.0.4.nupkg.sha512"
+      "sha512": "sha512-z/0j0NOp9XRqbBs0iymv6ZSJ4J7hGXPijkifd+eK444XWzpeMkwiEgrAdvvhOLABJzDeMyCr03GihSbpWyI2Ng==",
+      "path": "xam.plugin.media/4.1.2-beta",
+      "hashPath": "xam.plugin.media.4.1.2-beta.nupkg.sha512"
     }
   }
 }

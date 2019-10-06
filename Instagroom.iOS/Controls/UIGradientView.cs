@@ -33,8 +33,5 @@ namespace Instagroom.iOS.Controls {
                     options: CGGradientDrawingOptions.DrawsBeforeStartLocation );
             }
         }
-
-        public UIGradientView ( IntPtr handle ) : base ( handle ) {
-        }
     }
 }

@@ -9,6 +9,8 @@ using Instagroom.Core.ViewModels;
 using Facebook.CoreKit;
 using Google.SignIn;
 using Firebase;
+using Instagroom.Core.Helpers;
+using Instagroom.iOS.Extensions;
 
 namespace Instagroom.iOS {
     [Register ( "AppDelegate" )]
@@ -44,6 +46,10 @@ namespace Instagroom.iOS {
             Firebase.Core.App.Configure ();
             var googleServiceDictionary = NSDictionary.FromFile ( "GoogleService-Info.plist" );
             SignIn.SharedInstance.ClientID = googleServiceDictionary["CLIENT_ID"].ToString ();
+
+            // Set status bar custom color
+            var statusBarView = UIApplication.SharedApplication.ValueForKey ( new NSString ( "statusBar" ) ) as UIView;
+            statusBarView.BackgroundColor = ColorHelper.Ocean.ToUIColor ();
 
             Window = new UIWindow ( UIScreen.MainScreen.Bounds );
 

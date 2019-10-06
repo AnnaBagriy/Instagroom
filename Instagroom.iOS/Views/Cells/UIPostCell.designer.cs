@@ -8,15 +8,11 @@ using Foundation;
 using System;
 using System.CodeDom.Compiler;
 
-namespace Instagroom.iOS.Controls
+namespace Instagroom.iOS.Views.Cells
 {
     [Register ("UIPostCell")]
     partial class UIPostCell
     {
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton bookmarkButton { get; set; }
-
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton commentsButton { get; set; }
@@ -28,6 +24,18 @@ namespace Instagroom.iOS.Controls
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton likeButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.NSLayoutConstraint photoHeightConstraint { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView postImage { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton saveButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -43,11 +51,6 @@ namespace Instagroom.iOS.Controls
 
         void ReleaseDesignerOutlets ()
         {
-            if (bookmarkButton != null) {
-                bookmarkButton.Dispose ();
-                bookmarkButton = null;
-            }
-
             if (commentsButton != null) {
                 commentsButton.Dispose ();
                 commentsButton = null;
@@ -61,6 +64,21 @@ namespace Instagroom.iOS.Controls
             if (likeButton != null) {
                 likeButton.Dispose ();
                 likeButton = null;
+            }
+
+            if (photoHeightConstraint != null) {
+                photoHeightConstraint.Dispose ();
+                photoHeightConstraint = null;
+            }
+
+            if (postImage != null) {
+                postImage.Dispose ();
+                postImage = null;
+            }
+
+            if (saveButton != null) {
+                saveButton.Dispose ();
+                saveButton = null;
             }
 
             if (timeAddedLabel != null) {

@@ -61,4 +61,7 @@
     <data name="SignUp_Cancel" xml:space="preserve">
         <value>Відмінити</value>
     </data>
+    <data name="Post_Comments" xml:space="preserve">
+        <value>Коментарі</value>
+    </data>
 </root>

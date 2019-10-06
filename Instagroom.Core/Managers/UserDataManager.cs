@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Instagroom.Core.Contracts.Managers;
 using Instagroom.Core.Contracts.Mappers;
@@ -112,7 +113,7 @@ namespace Instagroom.Core.Managers {
 
         public async Task<DatabaseResponseWithData<CurrentUserModel>> CheckUserIdentityAsync ( string email, string password ) {
             if ( !string.IsNullOrWhiteSpace ( email ) && !string.IsNullOrWhiteSpace ( password ) ) {
-                User user = null;
+                UserTable user = null;
 
                 try {
                     user = await _userRepository.GetUserAsync ( email );
@@ -153,7 +154,7 @@ namespace Instagroom.Core.Managers {
         }
 
         public async Task<DatabaseResponseWithData<IEnumerable<UserModel>>> GetAllUsersAsync () {
-            IEnumerable<User> users = null;
+            IEnumerable<UserTable> users = null;
 
             try {
                 users = await _userRepository.GetAllUsersAsync ();
@@ -168,7 +169,7 @@ namespace Instagroom.Core.Managers {
 
         public async Task<DatabaseResponseWithData<CurrentUserModel>> GetLoginUserAsync ( string email, string password ) {
             if ( !string.IsNullOrWhiteSpace ( email ) && !string.IsNullOrWhiteSpace ( password ) ) {
-                User user = null;
+                UserTable user = null;
 
                 try {
                     user = await _userRepository.GetLoginUserAsync ( email, password );
@@ -194,7 +195,7 @@ namespace Instagroom.Core.Managers {
 
         public async Task<DatabaseResponseWithData<UserModel>> GetUserAsync ( int id ) {
             if ( id != 0 ) {
-                User user = null;
+                UserTable user = null;
 
                 try {
                     user = await _userRepository.GetUserAsync ( id );
@@ -212,7 +213,7 @@ namespace Instagroom.Core.Managers {
 
         public async Task<DatabaseResponseWithData<UserModel>> GetUserAsync ( string email ) {
             if ( !string.IsNullOrWhiteSpace ( email ) ) {
-                User user = null;
+                UserTable user = null;
 
                 try {
                     user = await _userRepository.GetUserAsync ( email );
@@ -226,6 +227,32 @@ namespace Instagroom.Core.Managers {
             }
 
             return new DatabaseResponseWithData<UserModel> ( false, "" );
+        }
+
+        public async Task<DatabaseResponseWithData<List<UserModel>>> SearchUsersByFilterAsync ( string filter ) {
+            if ( !string.IsNullOrWhiteSpace ( filter ) ) {
+                List<UserTable> users = null;
+
+                try {
+                    users = ( await _userRepository.GetAllUsersAsync () ).ToList ();
+                } catch ( SQLiteException sqliteEx ) {
+                    return new DatabaseResponseWithData<List<UserModel>> ( false, sqliteEx.Message );
+                } catch ( Exception ex ) {
+                    return new DatabaseResponseWithData<List<UserModel>> ( false, ex.Message );
+                }
+
+                try {
+                    users = await _userRepository.FindUserByFilterAsync ( filter );
+                } catch ( SQLiteException sqliteEx ) {
+                    return new DatabaseResponseWithData<List<UserModel>> ( false, sqliteEx.Message );
+                } catch ( Exception ex ) {
+                    return new DatabaseResponseWithData<List<UserModel>> ( false, ex.Message );
+                }
+
+                return new DatabaseResponseWithData<List<UserModel>> ( true, null, _databaseMapper.ToUserModelFrom ( users ).ToList() );
+            }
+
+            return new DatabaseResponseWithData<List<UserModel>> ( false, "" );
         }
     }
 }
