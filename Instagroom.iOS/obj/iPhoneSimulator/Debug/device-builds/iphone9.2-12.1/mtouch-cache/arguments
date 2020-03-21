@@ -1,4 +1,0 @@
-# Version: 12.2.1.13 (d15-9: a4332c90)
-# [first argument, ignore] # @/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.2-12.1/response-file.rsp
-/Library/Frameworks/Xamarin.iOS.framework/Versions/12.2.1.13/lib/mtouch/mtouch.exe \
-	'--gcc_flags=-ObjC -lsqlite3 -L/Users/annabagriy/.nuget/packages/realm/3.4.0/build/../native/ios/universal -lrealm-wrappers -lz -framework Security -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __entitlements -Xlinker /Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.2-12.1/Entitlements.xcent' \

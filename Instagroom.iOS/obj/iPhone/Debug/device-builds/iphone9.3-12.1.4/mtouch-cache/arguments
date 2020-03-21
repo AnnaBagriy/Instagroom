@@ -1,4 +1,0 @@
-# Version: 12.2.1.13 (d15-9: a4332c90)
-# [first argument, ignore] # @/Users/annabagriy/Projects/Instagroom/Instagroom/Instagroom.iOS/obj/iPhone/Debug/device-builds/iphone9.3-12.1.4/response-file.rsp
-/Library/Frameworks/Xamarin.iOS.framework/Versions/12.2.1.13/lib/mtouch/mtouch.exe \
-	'--gcc_flags=-ObjC -lsqlite3' \
